@@ -1,5 +1,5 @@
 var loomians = {
-    embit: {
+    azulon: {
         name: "Azulon",
         number: 01,
         types: ["Wood"],
@@ -7702,6 +7702,14 @@ var moves = {
 
 
 var types = {
+    wood: {
+      weaknesses: ["fire", "poison", "ice", "insect"],
+      resistances: ["wood", "earth", "water", "light", "sound"],
+      immunities: [],
+      otherName: "wood",
+        
+    },
+    
     typeless: {
         weaknesses: ["mind", "brawler"],
         resistances: [],
