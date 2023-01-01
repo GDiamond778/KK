@@ -1,21 +1,21 @@
 var loomians = {
     embit: {
-        name: "Embit",
+        name: "Azulon",
         number: 01,
-        types: ["Fire"],
+        types: ["Wood"],
         abilities: ["Awakening"],
         sAbility: ["Terrifying"],
         finalEvo: false,
-        weight: 20,
-        height: 33,
+        weight: 00,
+        height: 00,
         baseStats: {
-            hp: 57,
-            energy: 51,
-            attack: 60,
-            defense: 67,
-            attackR: 36,
+            hp: 34,
+            energy: 70,
+            attack: 80,
+            defense: 45,
+            attackR: 27,
             defenseR: 50,
-            speed: 40
+            speed: 44
         }
     },
  
