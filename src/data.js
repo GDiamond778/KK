@@ -1568,6 +1568,104 @@ var types = {
       otherName: "wood",  
     },
     
+    metal: {
+      weaknesses: ["earth", "water", "fire", "force"],
+      resistances: ["metal", "wind", "poison", "lightning", "light", "insect"],
+      immunities: [],
+      otherName: "metal",  
+    },
+    
+    wind: {
+      weaknesses: ["ice", "lightning", "cosmic"],
+      resistances: ["earth", "balance", "sound"],
+      immunities: [],
+      otherName: "wind",  
+    },
+    
+    poison: {
+      weaknesses: ["earth", "mystic"],
+      resistances: ["wood", "poison", "force", "insect"],
+      immunities: [],
+      otherName: "poison",  
+    },
+    
+    ice: {
+      weaknesses: ["fire", "metal", "force"],
+      resistances: ["wind", "insect", "mystic"],
+      immunities: [],
+      otherName: "ice",  
+    },
+    
+    lightning: {
+      weaknesses: ["water"],
+      resistances: ["metal", "lightning"],
+      immunities: [],
+      otherName: "lightning",  
+    },
+    
+    force: {
+      weaknesses: ["wind", "spirit", "mystic"],
+      resistances: ["ice", "insect"],
+      immunities: [],
+      otherName: "force",  
+    },
+    
+    dark: {
+      weaknesses: ["fire", "light", "balance"],
+      resistances: ["wood", "dark", "spirit", "cosmic", "mystic"],
+      immunities: [],
+      otherName: "dark",  
+    },
+    
+    light: {
+      weaknesses: ["wood", "dark", "balance"],
+      resistances: ["light", "spirit", "water", "light", "sound"],
+      immunities: [],
+      otherName: "light",  
+    },
+    
+    spirit: {
+      weaknesses: ["light", "spirit", "mystic"],
+      resistances: ["poison", "force", "dark"],
+      immunities: [],
+      otherName: "spirit",  
+    },
+    
+    cosmic: {
+      weaknesses: ["light", "sound", "mystic"],
+      resistances: ["earth", "fire", "wind", "ice", "cosmic"],
+      immunities: [],
+      otherName: "cosmic",  
+    },
+    
+    balance: {
+      weaknesses: ["wind", "force"],
+      resistances: ["dark", "light"],
+      immunities: [],
+      otherName: "balance",  
+    },
+    
+    insect: {
+      weaknesses: ["fire", "poison", "ice"],
+      resistances: ["wood", "earth", "wind", "mystic", "sound"],
+      immunities: [],
+      otherName: "insect",  
+    },
+    
+    mystic: {
+      weaknesses: ["lightning", "light", "sound", "insect"],
+      resistances: ["poison", "force", "water", "spirit", "cosmic"],
+      immunities: [],
+      otherName: "mystic",  
+    },
+    
+    sound: {
+      weaknesses: ["wind", "light", "sound"],
+      resistances: ["water", "mystic"],
+      immunities: [],
+      otherName: "sound",  
+    },
+    
     typeless: {
         weaknesses: ["mind", "brawler"],
         resistances: [],
@@ -1589,39 +1687,11 @@ var types = {
         otherName: "volt"
     },
 
-    ice: {
-        weaknesses: ["fire", "metal", "brawler"],
-        resistances: ["ice", "air", "typeless"],
-        immunities: [],
-        otherName: "frost"
-    },
-
-    light: {
-        weaknesses: ["dark", "metal"],
-        resistances: ["fire", "light", "ancient"],
-        immunities: ["spirit"],
-        otherName: "shine"
-    },
-
-    dark: {
-        weaknesses: ["fire", "light", "bug"],
-        resistances: ["dark", "mind", "spirit"],
-        immunities: [],
-        otherName: "shade"
-    },
-
     bug: {
         weaknesses: ["ice", "air", "brawler"],
         resistances: ["earth", "dark", "plant", "bug"],
         immunities: [],
         otherName: "web"
-    },
-
-    metal: {
-        weaknesses: ["fire", "electric", "earth", "brawler"],
-        resistances: ["air", "bug", "metal", "ancient", "typeless", "ice", "mind"],
-        immunities: [],
-        otherName: "metalic"
     },
 
     air: {
@@ -1636,13 +1706,6 @@ var types = {
         resistances: ["toxic", "plant", "brawler"],
         immunities: [],
         otherName: "noxious"
-    },
-
-    spirit: {
-        weaknesses: ["light", "ancient", "spirit"],
-        resistances: ["dark", "toxic", "electric", "typeless"],
-        immunities: ["brawler"],
-        otherName: "spectral"
     },
 
     mind: {
