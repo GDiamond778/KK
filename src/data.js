@@ -933,6 +933,23 @@ var loomians = {
 
 
 var moves = {
+
+    strike: {
+        name: "Strike",
+        power: 40,
+        energy: 25,
+        accuracy: 100,
+        type: "Balance",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+
+
+
+
     pounce: {
         name: "Pounce",
         power: 40,
@@ -966,18 +983,6 @@ var moves = {
         mr: "Ranged",
         mr1: "Ranged Attack",
         mr2: "Ranged Defense"
-    },
-
-    strike: {
-        name: "Strike",
-        power: 40,
-        energy: 15,
-        accuracy: 100,
-        type: "Typeless",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true
     },
 
     shine: {
@@ -1192,15 +1197,6 @@ var moves = {
         name: "(No Move)",
         power: 0,
         energy: 0,
-        accuracy: 100,
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    accelerate: {
-        name: "Accelerate",
-        power: 0,
-        energy: 25,
         accuracy: 100,
         type: "Typeless",
         mr: "Support"
