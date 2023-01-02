@@ -1544,8 +1544,28 @@ var types = {
       weaknesses: ["fire", "poison", "ice", "insect"],
       resistances: ["wood", "earth", "water", "light", "sound"],
       immunities: [],
-      otherName: "wood",
-        
+      otherName: "wood",  
+    },
+    
+    earth: {
+      weaknesses: ["wood", "water", "ice", "sound"],
+      resistances: ["earth", "fire", "poison", "lightning", "balance"],
+      immunities: [],
+      otherName: "earth",  
+    },
+    
+    water: {
+      weaknesses: ["wood", "poison", "lightning", "sound"],
+      resistances: ["water", "fire", "ice", "mystic"],
+      immunities: [],
+      otherName: "water",  
+    },
+    
+    fire: {
+      weaknesses: ["earth", "water", "wind", "cosmic"],
+      resistances: ["wood", "fire", "metal", "ice"],
+      immunities: [],
+      otherName: "wood",  
     },
     
     typeless: {
@@ -1553,20 +1573,6 @@ var types = {
         resistances: [],
         immunities: [],
         otherName: "plain"
-    },
-
-    fire: {
-        weaknesses: ["water", "earth", "air"],
-        resistances: ["fire", "plant", "ice", "metal", "bug"],
-        immunities: [],
-        otherName: "flame"
-    },
-
-    water: {
-        weaknesses: ["plant", "electric", "toxic"],
-        resistances: ["fire", "water", "ice", "metal"],
-        immunities: [],
-        otherName: "wave"
     },
 
     plant: {
@@ -1588,13 +1594,6 @@ var types = {
         resistances: ["ice", "air", "typeless"],
         immunities: [],
         otherName: "frost"
-    },
-
-    earth: {
-        weaknesses: ["water", "plant", "ice"],
-        resistances: ["toxic"],
-        immunities: ["electric"],
-        otherName: "terra"
     },
 
     light: {
