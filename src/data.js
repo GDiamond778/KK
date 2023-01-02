@@ -3,8 +3,8 @@ var loomians = {
         name: "Azulon",
         number: 01,
         types: ["Wood"],
-        abilities: ["Awakening"],
-        sAbility: ["Terrifying"],
+        abilities: ["Sapper"],
+        sAbility: ["Botanist"],
         finalEvo: false,
         weight: 00,
         height: 00,
@@ -18,7 +18,87 @@ var loomians = {
             speed: 44
         }
     },
+    
+    dragnir: {
+        name: "Dragnir",
+        number: 04,
+        types: ["Earth"],
+        abilities: ["Static"],
+        sAbility: ["Armored Spine"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 42,
+            energy: 73,
+            attack: 50,
+            defense: 30,
+            attackR: 35,
+            defenseR: 80,
+            speed: 40
+        }
+    },
  
+    snartle: {
+        name: "Snartle",
+        number: 07,
+        types: ["Water"],
+        abilities: ["Snaked"],
+        sAbility: ["Armor Swap"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 41,
+            energy: 60,
+            attack: 55,
+            defense: 80,
+            attackR: 59,
+            defenseR: 30,
+            speed: 25
+        }
+    },
+    
+    steeline: {
+        name: "Steeline",
+        number: 10,
+        types: ["Metal"],
+        abilities: ["Stormbreaker"],
+        sAbility: ["Determination"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 30,
+            energy: 72,
+            attack: 65,
+            defense: 41,
+            attackR: 26,
+            defenseR: 36,
+            speed: 80
+        }
+    },
+    
+    conix: {
+        name: "Conix",
+        number: 13,
+        types: ["Fire"],
+        abilities: ["Rise"],
+        sAbility: ["Avian"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 32,
+            energy: 68,
+            attack: 30,
+            defense: 45,
+            attackR: 80,
+            defenseR: 35,
+            speed: 60
+        }
+    },
+    
     rabburn: {
         name: "Rabburn",
         number: 02,
