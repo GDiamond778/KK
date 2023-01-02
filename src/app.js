@@ -1077,6 +1077,7 @@ function loadStats() {
     statAtk1.innerHTML = Math.floor(atk1 * multi);
     multi = 1;
     if (ability1 == "Trash Armor" || ability1 == "Hard Candy") multi *= 1.5;
+    if (ability1 == "Exoskeleton") multi *= 1.3;
     if (firstItem == "Drop of Youth" && firstLoom.finalEvo == false) multi *= 1.5;
     if (firstItem == "Heavy Armor") multi *= 1.2;
     statDef1.innerHTML = Math.floor(def1 * multi);
@@ -1101,6 +1102,7 @@ function loadStats() {
     statAtk2.innerHTML = Math.floor(atk2 * multi);
     multi = 1;
     if (ability2 == "Trash Armor" || ability2 == "Hard Candy" || (secondItem == "Drop of Youth" && secondLoom.finalEvo == false)) multi *= 1.5;
+    if (ability2 == "Exoskeleton") multi *= 1.3;
     if (secondItem == "Heavy Armor") multi *= 1.2;
     statDef2.innerHTML = Math.floor(def2 * multi);
     multi = 1;
@@ -2394,6 +2396,10 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 1.5;
         stuffUsed.ability1 = ability1;
     }   
+    if ((move.mr1 == "Melee Defense" && ability1 == "Exoskeleton") {
+         multi *= 1.3;
+         stuffUsed.ability1 = ability1;
+    }
     if ((move.mr1 == "Melee Defense" && itemA == "Heavy Armor") ||
        (move.mr1 == "Ranged Defense" && itemA == "Heavy Shield")) {
             multi *= 1.2;
@@ -2434,6 +2440,10 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     if ((ability2 == "Trash Armor" || ability2 == "Hard Candy") && move.mr2 == "Melee Defense" && adaptive.mr2 != "Ranged Defense") {
         multi *= 1.5;
         stuffUsed.ability2 = ability2;
+    }
+    if ((move.mr2 == "Melee Defense" && ability2 == "Exoskeleton") {
+         multi *= 1.3;
+         stuffUsed.ability2 = ability2;
     }
     if (ability2 == "Slick Shell" && (move.mr2 == "Ranged Defense" || adaptive.mr2 == "Ranged Defense")) {
         multi *= 2;
