@@ -2441,7 +2441,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 1.5;
         stuffUsed.ability2 = ability2;
     }
-    if ((move.mr2 == "Melee Defense" && ability2 == "Exoskeleton") {
+    if (move.mr2 == "Melee Defense" && ability2 == "Exoskeleton") {
          multi *= 1.3;
          stuffUsed.ability2 = ability2;
     }
