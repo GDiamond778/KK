@@ -98,835 +98,248 @@ var loomians = {
             speed: 60
         }
     },
-    
-    rabburn: {
-        name: "Rabburn",
-        number: 02,
-        types: ["Fire"],
-        abilities: ["Awakening"],
-        sAbility: ["Terrifying"],
-        finalEvo: false,
-        weight: 39,
-        height: 59,
-        baseStats: {
-            hp: 61,
-            energy: 67,
-            attack: 75,
-            defense: 95,
-            attackR: 46,
-            defenseR: 68,
-            speed: 60
-        }
-    },
- 
-    searknight: {
-        name: "Searknight",
-        number: 03,
-        types: ["Fire", "Metal"],
-        abilities: ["Awakening"],
-        sAbility: ["Terrifying"],
-        weight: 98,
-        height: 82,
-        baseStats: {
-            hp: 88,
-            energy: 88,
-            attack: 102,
-            defense: 125,
-            attackR: 60,
-            defenseR: 82,
-            speed: 65
-        }
-    },
- 
-    dripple: {
-        name: "Dripple",
-        number: 04,
-        types: ["Water"],
-        abilities: ["Awakening"],
-        sAbility: ["Power Napper"],
-        finalEvo: false,
-        weight: 17,
-        height: 30,
-        baseStats: {
-            hp: 63,
-            energy: 51,
-            attack: 56,
-            defense: 50,
-            attackR: 55,
-            defenseR: 45,
-            speed: 41
-        }
-    },
- 
-    reptide: {
-        name: "Reptide",
-        number: 05,
-        types: ["Water"],
-        abilities: ["Awakening"],
-        sAbility: ["Power Napper"],
-        finalEvo: false,
-        weight: 35,
-        height: 42,
-        baseStats: {
-            hp: 78,
-            energy: 67,
-            attack: 71,
-            defense: 70,
-            attackR: 70,
-            defenseR: 65,
-            speed: 51
-        }
-    },
- 
-    luminami: {
-        name: "Luminami",
-        number: 06,
-        types: ["Water", "Light"],
-        abilities: ["Awakening"],
-        sAbility: ["Power Napper"],
-        weight: 91,
-        height: 63,
-        baseStats: {
-            hp: 102,
-            energy: 88,
-            attack: 90,
-            defense: 93,
-            attackR: 94,
-            defenseR: 83,
-            speed: 60
-        }
-    },
- 
-    fevine: {
-        name: "Fevine",
-        number: 07,
-        types: ["Plant"],
-        abilities: ["Awakening"],
-        sAbility: ["Thriving Pace"],
-        finalEvo: false,
-        weight: 15,
-        height: 28,
-        baseStats: {
-            hp: 45,
-            energy: 51,
-            attack: 71,
-            defense: 44,
-            attackR: 50,
-            defenseR: 35,
-            speed: 64
-        }
-    },
- 
-    felver: {
-        name: "Felver",
-        number: 08,
-        types: ["Plant"],
-        abilities: ["Awakening"],
-        sAbility: ["Thriving Pace"],
-        finalEvo: false,
-        weight: 37,
-        height: 46,
-        baseStats: {
-            hp: 55,
-            energy: 67,
-            attack: 96,
-            defense: 55,
-            attackR: 70,
-            defenseR: 45,
-            speed: 84
-        }
-    },
- 
-    tahtab: {
-        name: "Tahtab",
-        number: 09,
-        types: ["Plant", "Brawler"],
-        abilities: ["Awakening"],
-        sAbility: ["Thriving Pace"],
-        weight: 74,
-        height: 64,
-        baseStats: {
-            hp: 72,
-            energy: 88,
-            attack: 126,
-            defense: 75,
-            attackR: 80,
-            defenseR: 65,
-            speed: 104
-        }
-    },
- 
-    eaglit: {
-        name: "Eaglit",
-        number: 10,
-        types: ["Light"],
-        abilities: ["Awakening"],
-        sAbility: ["Applied Frustration"],
-        finalEvo: false,
-        weight: 17,
-        heigth: 29,
-        baseStats: {
-            hp: 45,
-            energy: 51,
-            attack: 36,
-            defense: 36,
-            attackR: 71,
-            defenseR: 62,
-            speed: 60
-        }
-    },
 
-    'eaglit-armenti': {
-        name: "Eaglit-Armenti",
-        number: 10,
-        types: ["Light"],
-        abilities: ["Awakening"],
-        sAbility: ["Applied Frustration"],
-        weight: 17,
-        heigth: 29,
-        baseStats: {
-            hp: 84,
-            energy: 88,
-            attack: 80,
-            defense: 71,
-            attackR: 125,
-            defenseR: 87,
-            speed: 75
-        }
-    },
- 
-    torprey: {
-        name: "Torprey",
-        number: 11,
-        types: ["Light"],
-        abilities: ["Awakening"],
-        sAbility: ["Applied Frustration"],
-        finalEvo: false,
-        weight: 25,
-        height: 52,
-        baseStats: {
-            hp: 57,
-            energy: 67,
-            attack: 64,
-            defense: 40,
-            attackR: 91,
-            defenseR: 63,
-            speed: 90
-        }
-    },
- 
-    falkyrie: {
-        name: "Falkyrie",
-        number: 12,
-        types: ["Light", "Metal"],
-        abilities: ["Awakening"],
-        sAbility: ["Applied Frustration"],
-        weight: 80,
-        height: 77,
-        baseStats: {
-            hp: 84,
-            energy: 88,
-            attack: 80,
-            defense: 71,
-            attackR: 125,
-            defenseR: 87,
-            speed: 75
-        }
-    },
- 
-    vambat: {
-        name: "Vambat",
-        number: 13,
-        types: ["Dark"],
-        abilities: ["Awakening"],
-        sAbility: ["Sharp Claws"],
-        finalEvo: false,
-        weight: 8,
-        height: 26,
-        baseStats: {
-            hp: 47,
-            energy: 51,
-            attack: 47,
-            defense: 50,
-            attackR: 47,
-            defenseR: 50,
-            speed: 69
-        }
-    },
- 
-    dimpire: {
-        name: "Dimpire",
-        number: 14,
-        types: ["Dark"],
-        abilities: ["Awakening"],
-        sAbility: ["Sharp Claws"],
-        finalEvo: false,
-        weight: 30,
-        height: 61,
-        baseStats: {
-            hp: 60,
-            energy: 67,
-            attack: 65,
-            defense: 75,
-            attackR: 60,
-            defenseR: 60,
-            speed: 85
-        }
-    },
- 
-    vesperatu: {
-        name: "Vesperatu",
-        number: 15,
-        types: ["Dark", "Spirit"],
-        abilities: ["Awakening"],
-        sAbility: ["Sharp Claws"],
-        weight: 65,
-        height: 80,
-        baseStats: {
-            hp: 76,
-            energy: 88,
-            attack: 110,
-            defense: 90,
-            attackR: 82,
-            defenseR: 65,
-            speed: 99
-        }
-    },
- 
-    snocub: {
-        name: "Snocub",
+    cranedge: {
+        name: "Cranedge",
         number: 16,
-        types: ["Ice"],
-        abilities: ["Awakening"],
-        sAbility: ["Staunch"],
+        types: ["Wind"],
+        abilities: ["Scout"],
+        sAbility: ["Wind Walker"],
         finalEvo: false,
-        weight: 6,
-        height: 19,
+        weight: 00,
+        height: 00,
         baseStats: {
-            hp: 55,
-            energy: 51,
-            attack: 45,
-            defense: 38,
-            attackR: 67,
-            defenseR: 60,
-            speed: 45
+            hp: 34,
+            energy: 66,
+            attack: 60,
+            defense: 22,
+            attackR: 50,
+            defenseR: 41,
+            speed: 77
         }
     },
- 
-    snowki: {
-        name: "Snowki",
+
+    chromane: {
+        name: "Chromane",
         number: 17,
-        types: ["Ice"],
-        abilities: ["Awakening"],
-        sAbility: ["Staunch"],
-        finalEvo: false,
-        weight: 35,
-        height: 57,
+        types: ["Wind", "Metal"],
+        abilities: ["Scout"],
+        sAbility: ["Wind Walker"],
+        finalEvo: true,
+        weight: 00,
+        height: 00,
         baseStats: {
-            hp: 65,
-            energy: 67,
-            attack: 75,
-            defense: 65,
-            attackR: 75,
-            defenseR: 65,
-            speed: 60
-        }
-    },
- 
-    himbrr: {
-        name: "Himbrr",
-        number: 18,
-        types: ["Ice", "Earth"],
-        abilities: ["Awakening"],
-        sAbility: ["Staunch"],
-        weight: 108,
-        height: 92,
-        baseStats: {
-            hp: 124,
-            energy: 88,
-            attack: 98,
-            defense: 115,
-            attackR: 65,
-            defenseR: 75,
-            speed: 45
-        }
-    },
- 
-     weevolt: {
-        name: "Weevolt",
-        number: 19,
-        types: ["Electric"],
-        abilities: ["Awakening"],
-        sAbility: ["Brute Force"],
-        finalEvo: false,
-        weight: 14,
-        height: 27,
-        baseStats: {
-            hp: 51,
-            energy: 51,
-            attack: 36,
-            defense: 36,
-            attackR: 67,
-            defenseR: 55,
-            speed: 65
-        }
-    },
- 
-    stozap: {
-        name: "Stozap",
-        number: 20,
-        types: ["Electric"],
-        abilities: ["Awakening"],
-        sAbility: ["Brute Force"],
-        finalEvo: false,
-        weight: 33,
-        height: 49,
-        baseStats: {
-            hp: 71,
-            energy: 67,
-            attack: 56,
-            defense: 41,
-            attackR: 88,
-            defenseR: 60,
-            speed: 89
-        }
-    },
- 
-    zuelong: {
-        name: "Zuelong",
-        number: 21,
-        types: ["Electric", "Ancient"],
-        abilities: ["Awakening"],
-        sAbility: ["Brute Force"],
-        weight: 59,
-        height: 87,
-        baseStats: {
-            hp: 78,
-            energy: 88,
-            attack: 89,
-            defense: 56,
-            attackR: 106,
-            defenseR: 74,
-            speed: 119
-        }
-    },
- 
-    twilat: {
-        name: "Twilat",
-        number: 22,
-        types: ["Typeless"],
-        abilities: ["Territorial", "Confidence"],
-        sAbility: ["Neutralize"],
-        finalEvo: false,
-        weight: 10,
-        height: 14,
-        baseStats: {
-            hp: 50,
-            energy: 41,
-            attack: 42,
-            defense: 38,
-            attackR: 42,
-            defenseR: 38,
-            speed: 40
+            hp: 48,
+            energy: 70,
+            attack: 95,
+            defense: 35,
+            attackR: 90,
+            defenseR: 50,
+            speed: 100
         }
     },
 
-    'twilat-rainbow': {
-        name: "Twilat-Rainbow",
-        number: 22,
-        types: ["Typeless"],
-        abilities: ["Territorial", "Confidence"],
-        sAbility: ["Neutralize"],
-        weight: 10,
-        height: 14,
-        baseStats: {
-            hp: 85,
-            energy: 80,
-            attack: 51,
-            defense: 84,
-            attackR: 116,
-            defenseR: 83,
-            speed: 96
-        }
-    },
- 
-    umbrat: {
-        name: "Umbrat",
-        number: 23,
-        types: ["Dark"],
-        abilities: ["Dusk", "Confidence"],
-        sAbility: ["Overshadow"],
-        weight: 38,
-        height: 39,
-        baseStats: {
-            hp: 75,
-            energy: 75,
-            attack: 96,
-            defense: 79,
-            attackR: 51,
-            defenseR: 78,
-            speed: 71
-        }
-    },
- 
-    luxoar: {
-        name: "Luxoar",
+    nymon: {
+        name: "Nymon",
         number: 24,
-        types: ["Light"],
-        abilities: ["Dawn", "Confidence"],
-        sAbility: ["Illuminate"],
-        weight: 37,
-        height: 39,
-        baseStats: {
-            hp: 75,
-            energy: 75,
-            attack: 51,
-            defense: 68,
-            attackR: 96,
-            defenseR: 69,
-            speed: 91
-        }
-    },
- 
-    tiklipse: {
-        name: "Tiklipse",
-        number: 25,
-        types: ["Light", "Dark"],
-        abilities: ["Circadian"],
-        sAbility: ["Total Eclipse"],
-        weight: 42,
-        height: 45,
-        baseStats: {
-            hp: 85,
-            energy: 80,
-            attack: 51,
-            defense: 84,
-            attackR: 116,
-            defenseR: 83,
-            speed: 96
-        }
-    },
- 
-    cathorn: {
-        name: "Cathorn",
-        number: 26,
-        types: ["Bug"],
-        abilities: ["Hasty"],
-        sAbility: ["Defensive Priority"],
+        types: ["Insect"],
+        abilities: ["Accelerate"],
+        sAbility: ["Insectify"],
         finalEvo: false,
-        weight: 7,
-        height: 13,
+        weight: 00,
+        height: 00,
         baseStats: {
-            hp: 35,
-            energy: 37,
-            attack: 40,
-            defense: 24,
-            attackR: 55,
-            defenseR: 24,
-            speed: 47
-        }
-    },
- 
-    propae: {
-        name: "Propae",
-        number: 27,
-        types: ["Bug"],
-        abilities: ["Hasty"],
-        sAbility: ["Defensive Priority"],
-        finalEvo: false,
-        weight: 14,
-        height: 35,
-        baseStats: {
-            hp: 50,
-            energy: 46,
-            attack: 39,
-            defense: 60,
-            attackR: 39,
-            defenseR: 55,
-            speed: 37
-        }
-    },
- 
-    cynamoth: {
-        name: "Cynamoth",
-        number: 28,
-        types: ["Bug", "Air"],
-        abilities: ["Mystery Toxins"],
-        sAbility: ["Flutter"],
-        weight: 20,
-        height: 45,
-        baseStats: {
-            hp: 60,
-            energy: 69,
-            attack: 45,
-            defense: 55,
-            attackR: 92,
-            defenseR: 80,
-            speed: 83
+            hp: 25,
+            energy: 58,
+            attack: 47,
+            defense: 30,
+            attackR: 60,
+            defenseR: 28,
+            speed: 57
         }
     },
 
-    sumobito: {
-        name: "Sumobito",
-        number: 28,
-        types: ["Bug", "Brawler"],
-        abilities: ["Guru"],
-        sAbility: ["Double Strike"],
-        weight: 154,
-        height: 62,
+    luminii: {
+        name: "Luminii",
+        number: 30,
+        types: ["Insect", "Light"],
+        abilities: ["Light Show"],
+        sAbility: ["Insectify"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
         baseStats: {
-            hp: 57,
-            energy: 80,
-            attack: 110,
-            defense: 91,
-            attackR: 21,
-            defenseR: 86,
+            hp: 36,
+            energy: 68,
+            attack: 36,
+            defense: 26,
+            attackR: 59,
+            defenseR: 72,
             speed: 50
         }
     },
- 
-    twittle: {
-        name: "Twittle",
-        number: 29,
-        types: ["Air"],
-        abilities: ["Early Bird", "Confidence"],
-        sAbility: ["Rev Up"],
-        finalEvo: false,
-        weight: 7,
-        height: 16,
-        baseStats: {
-            hp: 44,
-            energy: 40,
-            attack: 50,
-            defense: 38,
-            attackR: 22,
-            defenseR: 33,
-            speed: 58
-        }
-    },
- 
-    paratweet: {
-        name: "Paratweet",
-        number: 30,
-        types: ["Air"],
-        abilities: ["Early Bird", "Confidence"],
-        sAbility: ["Rev Up"],
-        finalEvo: false,
-        weight: 15,
-        height: 32,
-        baseStats: {
-            hp: 54,
-            energy: 56,
-            attack: 75,
-            defense: 48,
-            attackR: 32,
-            defenseR: 43,
-            speed: 88
-        }
-    },
- 
-    avitross: {
-        name: "Avitross",
-        number: 31,
-        types: ["Air"],
-        abilities: ["Early Bird", "Confidence"],
-        sAbility: ["Rev Up"],
-        weight: 44,
-        height: 63,
-        baseStats: {
-            hp: 79,
-            energy: 80,
-            attack: 100,
-            defense: 68,
-            attackR: 62,
-            defenseR: 63,
-            speed: 113
-        }
-    },
 
-    'cosmiore-cracked': {
-        name: "Cosmiore-Cracked",
-        number: 208,
-        types: ["Ancient", "Mind"],
-        abilities: ["Regift"],
-        sAbility: ["Enchanted Coat"],
-        weight: 123,
-        height: 37,
+    blubbish: {
+        name: "Blubbish",
+        number: 22,
+        types: ["Water"],
+        abilities: ["Puff Up"],
+        sAbility: ["Dampen"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
         baseStats: {
-            hp: 99,
-            energy: 115,
-            attack: 43,
-            defense: 115,
-            attackR: 124,
-            defenseR: 78,
-            speed: 76
-        }
-    },
-
-    'cosmiore-unleashed': {
-        name: "Cosmiore-Unleashed",
-        number: 208,
-        types: ["Ancient", "Mind"],
-        abilities: ["Surrogate"],
-        sAbility: ["Idiosyncratic"],
-        weight: 123,
-        height: 37,
-        baseStats: {
-            hp: 99,
-            energy: 105,
-            attack: 134,
-            defense: 105,
+            hp: 41,
+            energy: 68,
+            attack: 62,
+            defense: 58,
             attackR: 43,
-            defenseR: 68,
+            defenseR: 41,
+            speed: 51
+        }
+    },
+
+    mutle: {
+        name: "Mutle",
+        number: 24,
+        types: ["Earth", "Insect"],
+        abilities: ["Exoskeleton"],
+        sAbility: ["Clamp"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 47,
+            energy: 44,
+            attack: 29,
+            defense: 60,
+            attackR: 15,
+            defenseR: 51,
+            speed: 14
+        }
+    },
+
+    glowud: {
+        name: "Glowud",
+        number: 52,
+        types: ["Wood"],
+        abilities: ["Glow Sap"],
+        sAbility: ["Botanist"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 41,
+            energy: 63,
+            attack: 31,
+            defense: 54,
+            attackR: 33,
+            defenseR: 54,
+            speed: 14
+        }
+    },
+    
+    'shurlow-day': {
+        name: "Shurlow-Day",
+        number: 53,
+        types: ["Wood"],
+        abilities: ["Glow Sap"],
+        sAbility: ["Chlorophyll"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 66,
+            energy: 77,
+            attack: 25,
+            defense: 59,
+            attackR: 68,
+            defenseR: 61,
+            speed: 57
+        }
+    },
+
+    'shurlow-night': {
+        name: "Shurlow-Night",
+        number: 53,
+        types: ["Wood"],
+        abilities: ["Glow Sap"],
+        sAbility: ["Botanist"],
+        finalEvo: true,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 66,
+            energy: 77,
+            attack: 37,
+            defense: 79,
+            attackR: 50,
+            defenseR: 80,
+            speed: 24
+        }
+    },
+
+    flowum: {
+        name: "Flowum",
+        number: 54,
+        types: ["Wood", "Light"],
+        abilities: ["Glow Sap"],
+        sAbility: ["Chlorophyll"],
+        finalEvo: true,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 68,
+            energy: 75,
+            attack: 55,
+            defense: 70,
+            attackR: 112,
+            defenseR: 80,
+            speed: 80
+        }
+    },
+
+    kraboo: {
+        name: "Kraboo",
+        number: 99,
+        types: ["Water", "Metal"],
+        abilities: ["Exoskeleton"],
+        sAbility: ["Surprise"],
+        finalEvo: true,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 98,
+            energy: 100,
+            attack: 65,
+            defense: 86,
+            attackR: 65,
+            defenseR: 80,
+            speed: 59
+        }
+    },
+
+    miralo: {
+        name: "Miralo",
+        number: 999,
+        types: ["Light", "Wind"],
+        abilities: ["Dizzy"],
+        sAbility: ["Reflector"],
+        finalEvo: true,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 89,
+            energy: 103,
+            attack: 32,
+            defense: 58,
+            attackR: 120,
+            defenseR: 88,
             speed: 96
         }
     },
 
-    nevermare: {
-        name: "Nevermare",
-        types: ["Plant", "Spirit"],
-        abilities: ["Razor Sharp"],
-        sAbility: ["Frenzy"],
-        weight: 221,
-        height: 86,
-        baseStats: {
-            hp: 61,
-            energy: 120,
-            attack: 113,
-            defense: 89,
-            attackR: 46,
-            defenseR: 110,
-            speed: 111
-        }
-    },
-
-    akhalos: {
-        name: "Akhalos",
-        types: ["Ice", "Water"],
-        abilities: ["Aqua Body"],
-        sAbility: ["Aggressive"],
-        weight: 221,
-        height: 86,
-        baseStats: {
-            hp: 111,
-            energy: 94,
-            attack: 120,
-            defense: 92,
-            attackR: 63,
-            defenseR: 86,
-            speed: 84
-        }
-    },
-
-    gargolem: {
-        name: "Gargolem",
-        types: ["Earth", "Air"],
-        abilities: ["Immunized"],
-        sAbility: ["Master"],
-        weight: 155,
-        height: 73,
-        baseStats: {
-            hp: 55,
-            energy: 100,
-            attack: 115,
-            defense: 85,
-            attackR: 115,
-            defenseR: 85,
-            speed: 95
-        }
-    },
-
-    'gargolem-attack': {
-        name: "Gargolem-Attack",
-        types: ["Earth", "Air"],
-        abilities: ["Immunized"],
-        sAbility: ["Master"],
-        weight: 171,
-        height: 77,
-        baseStats: {
-            hp: 55,
-            energy: 100,
-            attack: 155,
-            defense: 40,
-            attackR: 155,
-            defenseR: 40,
-            speed: 105
-        }
-    },
-
-    'gargolem-defense': {
-        name: "Gargolem-Defense",
-        types: ["Earth", "Air"],
-        abilities: ["Immunized"],
-        sAbility: ["Master"],
-        weight: 181,
-        height: 78,
-        baseStats: {
-            hp: 55,
-            energy: 100,
-            attack: 60,
-            defense: 155,
-            attackR: 60,
-            defenseR: 155,
-            speed: 65
-        }
-    },
-
-    'gargolem-speed': {
-        name: "Gargolem-Speed",
-        types: ["Earth", "Air"],
-        abilities: ["Immunized"],
-        sAbility: ["Master"],
-        weight: 64,
-        height: 61,
-        baseStats: {
-            hp: 55,
-            energy: 100,
-            attack: 85,
-            defense: 85,
-            attackR: 85,
-            defenseR: 85,
-            speed: 155
-        }
-    },
-
-    'heavy bag': {
-        name: "Heavy Bag",
-        number: 9999,
-        types: ["Typeless"],
-        abilities: ["Surrogate"],
-        sAbility: ["Idiosyncratic"],
-        weight: 123,
-        height: 200,
-        baseStats: {
-            hp: 450,
-            energy: 0,
-            attack: 0,
-            defense: 100,
-            attackR: 0,
-            defenseR: 100,
-            speed: 0
-        }
-    },
-
-    celesting: {
-        name: "Celesting",
-        number: 140,
-        types: ["Metal", "Light"],
-        abilities: ["Reverberate"],
-        sAbility: ["Mystic Tone"],
-        weight: 21,
-        height: 33,
-        baseStats: {
-            hp: 125,
-            energy: 125,
-            attack: 53,
-            defense: 74,
-            attackR: 103,
-            defenseR: 79,
-            speed: 91
-        }
-    },
+    
 
 };
 
@@ -946,32 +359,146 @@ var moves = {
         contact: true
     },
 
-
-
-
-
-    pounce: {
-        name: "Pounce",
-        power: 40,
-        energy: 15,
+    tailSlash: {
+        name: "Tail Slash",
+        power: 65,
+        energy: 45,
         accuracy: 100,
-        type: "Typeless",
+        type: "Balance",
         mr: "Melee",
         mr1: "Melee Attack",
         mr2: "Melee Defense",
         contact: true
     },
 
-    singe: {
-        name: "Singe",
+    swipe: {
+        name: "Swipe",
+        power: 60,
+        energy: 40,
+        accuracy: 100,
+        type: "Balance",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    mudKick: {
+        name: "Mud Kick",
+        power: 55,
+        energy: 45,
+        accuracy: 100,
+        type: "Earth",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    uppercut: {
+        name: "Uppercut",
+        power: 60,
+        energy: 45,
+        accuracy: 100,
+        type: "Force",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    stringStrikes: {
+        name: "String Strikes",
+        power: 20,
+        energy: 45,
+        accuracy: 100,
+        type: "Insect",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    steelStrike: {
+        name: "Steel Strike",
+        power: 60,
+        energy: 45,
+        accuracy: 100,
+        type: "Metal",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    peck: {
+        name: "Peck",
+        power: 40,
+        energy: 25,
+        accuracy: 100,
+        type: "Wind",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    windClaw: {
+        name: "Wind Claw",
+        power: 60,
+        energy: 45,
+        accuracy: 100,
+        type: "Wind",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    vineSmite: {
+        name: "Vine Smite",
+        power: 55,
+        energy: 20,
+        accuracy: 100,
+        type: "Wood",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    drainingFang: {
+        name: "Draining Fang",
+        power: 55,
+        energy: 45,
+        accuracy: 100,
+        type: "Wood",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    shriek: {
+        name: "Shriek",
         power: 40,
         energy: 20,
         accuracy: 100,
-        type: "Fire",
+        type: "Balance",
         mr: "Ranged",
         mr1: "Ranged Attack",
         mr2: "Ranged Defense",
-        secondaryEffect: true
+    },
+
+    shriek: {
+        name: "Shriek",
+        power: 40,
+        energy: 20,
+        accuracy: 100,
+        type: "Balance",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
     },
 
     spray: {
