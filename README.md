@@ -4,7 +4,7 @@ This is the repository for the Loomian Legacy Damage Calculator
 
 ## Contributing
 
-There are 3 areas you can contribute to: loomian data, moves data, and set data.
+There are 3 areas you can contribute to: kinalite data, moves data, and set data.
 
 For loomian data, follow this template: 
 
