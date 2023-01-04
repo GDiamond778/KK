@@ -29,10 +29,13 @@ For move data, follow this template:
 
 ```js
     hazer: {
+        //required properties
         name: "Hazer",
         power: 40,
         type: "Light",
         mr: "Ranged",
+       
+        // optional properties
         contact: true,
         hits: 3,
         aoe: true,
@@ -41,7 +44,7 @@ For move data, follow this template:
         recoil: 1/4
     }
 ```
-If the move doesn't make contact, is single hit, not aoe, doesn't have a secondary effect, doesn't have a drain effect or a recoil effect, don't include that property at all. The first 4 must be included, last 4 are optional.
+If the move doesn't make contact, is single hit, not aoe, doesn't have a secondary effect, doesn't have a drain effect or a recoil effect, don't include that property at all. The first 4 must be included, last 6 are optional.
 
 For set data, follow this template: 
 
