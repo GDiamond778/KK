@@ -1,6 +1,6 @@
 # Damage-Calculator
 
-This is the repository for the Loomian Legacy Damage Calculator
+This is the repository for the Kinalite Kingdom Damage Calculator
 
 ## Contributing
 
