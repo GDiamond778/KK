@@ -151,7 +151,7 @@
                                 <th></th>
                                 <th>Base</th>
                               
-                                <th>TPs</th>
+                                <th>Stars</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -162,13 +162,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                              
                                 <td>
-                                    <input id="HPIV1" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="HPEV1" value=0 type=number min=0 max=200 step=4
+                                    <input id="HPEV1" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -184,13 +180,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                              
                                 <td>
-                                    <input id="energyIV1" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="energyEV1" value=0 type=number min=0 max=200 step=4
+                                    <input id="energyEV1" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -206,13 +198,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                             
                                 <td>
-                                    <input id="atkIV1" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="atkEV1" value=0 type=number min=0 max=200 step=4
+                                    <input id="atkEV1" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -245,13 +233,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                              
                                 <td>
-                                    <input id="defIV1" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="defEV1" value=0 type=number min=0 max=200 step=4
+                                    <input id="defEV1" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -284,13 +268,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                              
                                 <td>
-                                    <input id="atkRIV1" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="atkREV1" value=0 type=number min=0 max=200 step=4
+                                    <input id="atkREV1" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -323,13 +303,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                               
                                 <td>
-                                    <input id="defRIV1" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="defREV1" value=0 type=number min=0 max=200 step=4
+                                    <input id="defREV1" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -362,13 +338,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                                
                                 <td>
-                                    <input id="spdIV1" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="spdEV1" value=0 type=number min=0 max=200 step=4
+                                    <input id="spdEV1" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -468,6 +440,7 @@
                             <option value="healthy">Healthy</option>
                             <option value="paralasis">Paralyzed</option>
                             <option value="burned">Burned</option>
+                            <option value="frozen">Frostbite</option>
                             <option value="poisoned">Poisoned</option>
                             <option value="asleep">Asleep</option>
                         </select>
@@ -641,12 +614,12 @@
                     <div>
                         <div class="left">
                             <input type="checkbox" class="hiddenToUser" id="sapPlant1" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="sapPlant1" title="Is this side affected by Sap Plant">Sap Plant</label>
+                            <label class="radiolbl fieldlbl icetrap" for="sapPlant1" title="Is this side affected by Glow Sap">Glow Sap</label>
                         </div>
 
                         <div class="right">
                             <input type="checkbox" class="hiddenToUser" id="sapPlant2" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="sapPlant2" title="Is this side affected by Sap Plant">Sap Plant</label>
+                            <label class="radiolbl fieldlbl icetrap" for="sapPlant2" title="Is this side affected by Glow Sap">Glow Sap</label>
                         </div>
                     </div>
 
@@ -814,8 +787,7 @@
                             <tr>
                                 <th></th>
                                 <th>Base</th>
-                                <th>UPs</th>
-                                <th>TPs</th>
+                                <th>Stars</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -826,13 +798,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                               
                                 <td>
-                                    <input id="HPIV2" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="HPEV2" value=0 type=number min=0 max=200 step=4
+                                    <input id="HPEV2" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -848,13 +816,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                               
                                 <td>
-                                    <input id="energyIV2" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="energyEV2" value=0 type=number min=0 max=200 step=4
+                                    <input id="energyEV2" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -869,13 +833,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                              
                                 <td>
-                                    <input id="atkIV2" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="atkEV2" value=0 type=number min=0 max=200 step=4
+                                    <input id="atkEV2" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -908,13 +868,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                               
                                 <td>
-                                    <input id="defIV2" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="defEV2" value=0 type=number min=0 max=200 step=4
+                                    <input id="defEV2" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -947,13 +903,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                              
                                 <td>
-                                    <input id="atkRIV2" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="atkREV2" value=0 type=number min=0 max=200 step=4
+                                    <input id="atkREV2" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -986,13 +938,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                               
                                 <td>
-                                    <input id="defRIV2" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="defREV2" value=0 type=number min=0 max=200 step=4
+                                    <input id="defREV2" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -1025,13 +973,9 @@
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
+                                
                                 <td>
-                                    <input id="spdIV2" value=40 type=number min=0 max=40
-                                        onkeyup="this.value = restrict(this.value, this.min, this.max)"
-                                        onchange="update()">
-                                </td>
-                                <td>
-                                    <input id="spdEV2" value=0 type=number min=0 max=200 step=4
+                                    <input id="spdEV2" value=0 type=number min=0 max=5 step=1
                                         onkeyup="this.value = restrict(this.value, this.min, this.max)"
                                         onchange="update()">
                                 </td>
@@ -1131,6 +1075,7 @@
                             <option value="healthy">Healthy</option>
                             <option value="paralasis">Paralyzed</option>
                             <option value="burned">Burned</option>
+                            <option value="frozen">Frostbite</option>
                             <option value="poisoned">Poisoned</option>
                             <option value="asleep">Asleep</option>
                         </select>
