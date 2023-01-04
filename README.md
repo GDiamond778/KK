@@ -6,21 +6,21 @@ This is the repository for the Kinalite Kingdom Damage Calculator
 
 There are 3 areas you can contribute to: kinalite data, moves data, and set data.
 
-For loomian data, follow this template: 
+For kinalite data, follow this template: 
 
 ```js
-    searknight: {
-        name: "Searknight",
-        number: 3,
-        types: ["Fire", "Metal"],
+    azulon: {
+        name: "Azulon",
+        number: 1,
+        types: ["Wood", "None"],
         baseStats: {
-            hp: 50,
-            energy: 41,
-            attack: 38,
-            defense: 41,
-            attackR: 42,
-            defenseR: 38,
-            speed: 40
+            hp: 34,
+            energy: 70,
+            attack: 80,
+            defense: 45,
+            attackR: 27,
+            defenseR: 50,
+            speed: 44
         }
     }
 ```
@@ -28,53 +28,46 @@ For loomian data, follow this template:
 For move data, follow this template: 
 
 ```js
-    rapidFire: {
-        name: "Rapid Fire",
-        power: 20,
-        type: "Fire",
+    hazer: {
+        name: "Hazer",
+        power: 40,
+        type: "Light",
         mr: "Ranged",
         contact: true,
         hits: 3,
         aoe: true,
-        secondaryEffect: true
+        secondaryEffect: true,
+        drain: 1/3,
+        recoil: 1/4
     }
 ```
-If the move doesn't make contact, is single hit, not aoe, or doesn't have a secondary effect, don't include that property at all. The first 4 must be included, last 4 are optional.
+If the move doesn't make contact, is single hit, not aoe, doesn't have a secondary effect, doesn't have a drain effect or a recoil effect, don't include that property at all. The first 4 must be included, last 4 are optional.
 
 For set data, follow this template: 
 
 ```js
     {
-        name: "Duskit",
-        setName: "Peace of Mind",
+        name: "Miralo",
+        setName: "Mixed Tank",
         evs: {
-            hp: 100,
+            hp: 5,
             energy: 0,
             attack: 0,
-            defense: 0,
-            attackR: 200,
-            defenseR: 0,
-            speed: 200
-        },
-        ivs: {
-            hp: 40,
-            energy: 40,
-            attack: 40,
-            defense: 40,
-            attackR: 40,
-            defenseR: 40,
-            speed: 40
+            defense: 3,
+            attackR: 0,
+            defenseR: 4,
+            speed: 0
         },
         moves: {
-            move1: "Spectral Burst",
-            move2: "Brainwash",
-            move3: "Peace Of Mind",
-            move4: "Final Ruse"
+            move1: "Hazer",
+            move2: "Magic Gem",
+            move3: "placeholder",
+            move4: "placeholder"
         },
-        posNature: "nimble",
-        negNature: "none",
-        ability: "None",
-        item: "Power Cuffs",
+        posNature: "vigilant",
+        negNature: "lax",
+        ability: "Reflector",
+        item: "plceholder",
         level: 50
     }
  ```
