@@ -100,34 +100,22 @@ let baseSpd1 = document.getElementById("baseSpd1");
 let baseSpd2 = document.getElementById("baseSpd2");
 
 let hpEV1 = document.getElementById("HPEV1");
-let hpIV1 = document.getElementById("HPIV1");
+
 let energyEV1 = document.getElementById("energyEV1");
-let energyIV1 = document.getElementById("energyIV1");
+
 let atkEV1 = document.getElementById("atkEV1");
-let atkIV1 = document.getElementById("atkIV1");
 let defEV1 = document.getElementById("defEV1");
-let defIV1 = document.getElementById("defIV1");
 let atkREV1 = document.getElementById("atkREV1");
-let atkRIV1 = document.getElementById("atkRIV1");
 let defREV1 = document.getElementById("defREV1");
-let defRIV1 = document.getElementById("defRIV1");
 let spdEV1 = document.getElementById("spdEV1");
-let spdIV1 = document.getElementById("spdIV1");
 
 let hpEV2 = document.getElementById("HPEV2");
-let hpIV2 = document.getElementById("HPIV2");
 let energyEV2 = document.getElementById("energyEV2");
-let energyIV2 = document.getElementById("energyIV2");
 let atkEV2 = document.getElementById("atkEV2");
-let atkIV2 = document.getElementById("atkIV2");
 let defEV2 = document.getElementById("defEV2");
-let defIV2 = document.getElementById("defIV2");
 let atkREV2 = document.getElementById("atkREV2");
-let atkRIV2 = document.getElementById("atkRIV2");
 let defREV2 = document.getElementById("defREV2");
-let defRIV2 = document.getElementById("defRIV2");
 let spdEV2 = document.getElementById("spdEV2");
-let spdIV2 = document.getElementById("spdIV2");
 
 let statHP1 = document.getElementById("statHP1");
 let statHP2 = document.getElementById("statHP2");
@@ -653,13 +641,7 @@ function loadSets(onlyFirst = false, onlySecond = false) {
         defREV1.value = set1.evs.defenseR;
         spdEV1.value = set1.evs.speed;
 
-        hpIV1.value = set1.ivs.hp;
-        energyIV1.value = set1.ivs.energy;
-        atkIV1.value = set1.ivs.attack;
-        defIV1.value = set1.ivs.defense;
-        atkRIV1.value = set1.ivs.attackR;
-        defRIV1.value = set1.ivs.defenseR;
-        spdIV1.value = set1.ivs.speed;
+      
 
         level1.value = set1.level;
         if (levelCheck.checked) level1.value = 100;
@@ -715,13 +697,7 @@ function loadSets(onlyFirst = false, onlySecond = false) {
         defREV2.value = set2.evs.defenseR;
         spdEV2.value = set2.evs.speed;
 
-        hpIV2.value = set2.ivs.hp;
-        energyIV2.value = set2.ivs.energy;
-        atkIV2.value = set2.ivs.attack;
-        defIV2.value = set2.ivs.defense;
-        atkRIV2.value = set2.ivs.attackR;
-        defRIV2.value = set2.ivs.defenseR;
-        spdIV2.value = set2.ivs.speed;
+     
 
         level2.value = set2.level;
         if (levelCheck.checked) level2.value = 100;
@@ -817,15 +793,7 @@ function makeBlankSet(loomian) {
             defenseR: 0,
             speed: 0
         },
-        ivs: {
-            hp: 40,
-            energy: 40,
-            attack: 40,
-            defense: 40,
-            attackR: 40,
-            defenseR: 40,
-            speed: 40
-        },
+     
         moves: {
             move1: "(No Move)",
             move2: "(No Move)",
@@ -1022,23 +990,23 @@ function loadStats() {
     let wasMaxNRG1 = (currentNRG1.value == energy1 ? true : false);
     let wasMaxNRG2 = (currentNRG2.value == energy2 ? true : false);
 
-    hp1 = calculateStat(baseHP1.value, hpIV1.value, hpEV1.value, level1.value, true, undefined, undefined, undefined, undefined);
-    energy1 = calculateStat(baseEnergy1.value, energyIV1.value, energyEV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, undefined, undefined, true);
-    atk1 = calculateStat(baseAtk1.value, atkIV1.value, atkEV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "AttackM");
-    def1 = calculateStat(baseDef1.value, defIV1.value, defEV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "DefenseM");
-    atkR1 = calculateStat(baseAtkR1.value, atkRIV1.value, atkREV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "AttackR");
-    defR1 = calculateStat(baseDefR1.value, defRIV1.value, defREV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "DefenseR");
-    spd1 = calculateStat(baseSpd1.value, spdIV1.value, spdEV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "Speed");
+    hp1 = calculateStat(baseHP1.value, hpEV1.value, level1.value, true, undefined, undefined, undefined, undefined);
+    energy1 = calculateStat(baseEnergy1.value, energyEV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, undefined, undefined, true);
+    atk1 = calculateStat(baseAtk1.value, atkEV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "AttackM");
+    def1 = calculateStat(baseDef1.value, defEV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "DefenseM");
+    atkR1 = calculateStat(baseAtkR1.value, atkREV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "AttackR");
+    defR1 = calculateStat(baseDefR1.value, defREV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "DefenseR");
+    spd1 = calculateStat(baseSpd1.value, spdEV1.value, level1.value, undefined, posNat1, negNat1, veryNat1, "Speed");
     if (firstLoom.name == "Spirivii" || firstLoom.name == "Eidohusk" || firstLoom.name == "Harvesect") energy1 = 0;
     if (firstLoom.name == "Mistlebud" || firstLoom.name == "Hollibunch") atkR1 = 0;
 
-    hp2 = calculateStat(baseHP2.value, hpIV2.value, hpEV2.value, level2.value, true, undefined, undefined, undefined, undefined);
-    energy2 = calculateStat(baseEnergy2.value, energyIV2.value, energyEV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, undefined, undefined, true);
-    atk2 = calculateStat(baseAtk2.value, atkIV2.value, atkEV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "AttackM");
-    def2 = calculateStat(baseDef2.value, defIV2.value, defEV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "DefenseM");
-    atkR2 = calculateStat(baseAtkR2.value, atkRIV2.value, atkREV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "AttackR");
-    defR2 = calculateStat(baseDefR2.value, defRIV2.value, defREV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "DefenseR");
-    spd2 = calculateStat(baseSpd2.value, spdIV2.value, spdEV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "Speed");
+    hp2 = calculateStat(baseHP2.value, hpEV2.value, level2.value, true, undefined, undefined, undefined, undefined);
+    energy2 = calculateStat(baseEnergy2.value, energyEV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, undefined, undefined, true);
+    atk2 = calculateStat(baseAtk2.value, atkEV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "AttackM");
+    def2 = calculateStat(baseDef2.value, defEV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "DefenseM");
+    atkR2 = calculateStat(baseAtkR2.value, atkREV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "AttackR");
+    defR2 = calculateStat(baseDefR2.value, defREV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "DefenseR");
+    spd2 = calculateStat(baseSpd2.value, spdEV2.value, level2.value, undefined, posNat2, negNat2, veryNat2, "Speed");
     if (secondLoom.name == "Spirivii" || secondLoom.name == "Eidohusk" || secondLoom.name == "Harvesect") energy2 = 0;
     if (secondLoom.name == "Mistlebud" || secondLoom.name == "Hollibunch") atkR2 = 0;
     
@@ -1122,20 +1090,19 @@ function loadStats() {
     multi = 1;
 }
 
-function calculateStat(base, IV, EV, level, isHP = false, posNat, negNat, veryNat, name, rest = false, isEnergy = false) {
+function calculateStat(base, EV, level, isHP = false, posNat, negNat, veryNat, name, rest = false, isEnergy = false) {
     let stat;
 
-    IV = parseInt(IV);
     level = parseInt(level);
     if (isHP) {
-        return Math.floor((2 * base + IV + Math.floor(EV / 4)) * level / 100) + level + 10;
+        return Math.floor((2 * base + Math.floor(EV / 4)) * level / 100) + level + 10;
     }
 
     if (isEnergy) {
-        stat = Math.floor(Math.floor(2 * base + IV + Math.floor(EV / 4)) * level / 65 + 80);
+        stat = Math.floor(Math.floor(2 * base + Math.floor(EV / 4)) * level / 65 + 80);
     }
     else {
-        stat = Math.floor(Math.floor((2 * base + IV + Math.floor(EV / 4)) * level / 100 + 5));
+        stat = Math.floor(Math.floor((2 * base + Math.floor(EV / 4)) * level / 100 + 5));
     }
 
     if (posNat == "brawny" && name == "AttackM") {
@@ -2379,13 +2346,13 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     if (crit && tempAtk.stage < 0) {
         if (ability1 == "Festive Spirit") {
             tempAtk.atk = currentEnergy1;
-        } else tempAtk.atk = calculateStat(tempAtk.base, tempAtk.iv.value, tempAtk.ev.value, tempAtk.level, undefined, tempAtk.posNat, tempAtk.negNat, tempAtk.veryNat, tempAtk.name);
+        } else tempAtk.atk = calculateStat(tempAtk.base, tempAtk.ev.value, tempAtk.level, undefined, tempAtk.posNat, tempAtk.negNat, tempAtk.veryNat, tempAtk.name);
     }
 
     if (ability2 == "Ignorant") {
         if (ability1 == "Festive Spirit") {
             tempAtk.atk = currentEnergy1;
-        } else tempAtk.atk = calculateStat(tempAtk.base, tempAtk.iv.value, tempAtk.ev.value, tempAtk.level, undefined, tempAtk.posNat, tempAtk.negNat, tempAtk.veryNat, tempAtk.name);
+        } else tempAtk.atk = calculateStat(tempAtk.base, tempAtk.ev.value, tempAtk.level, undefined, tempAtk.posNat, tempAtk.negNat, tempAtk.veryNat, tempAtk.name);
         stuffUsed.ability2 = ability2;
     }
     if ((ability1 == "Hasty" && move.mr1 == "Melee Attack") ||
@@ -2421,11 +2388,11 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     //Defense ----------------------------------------------------
 
     if (crit && tempDef.stage > 0) {
-        tempDef.def = calculateStat(tempDef.base, tempDef.iv.value, tempDef.ev.value, tempDef.level, undefined, tempDef.posNat, tempDef.negNat, tempDef.veryNat, tempDef.name, tempDef.rest);
+        tempDef.def = calculateStat(tempDef.base, tempDef.ev.value, tempDef.level, undefined, tempDef.posNat, tempDef.negNat, tempDef.veryNat, tempDef.name, tempDef.rest);
     }
     if ((ability1 == "Ignorant") || 
        (ability1 == "Bully" && loom1.height > loom2.height)) {
-        tempDef.def = calculateStat(tempDef.base, tempDef.iv.value, tempDef.ev.value, tempDef.level, undefined, tempDef.posNat, tempDef.negNat, tempDef.veryNat, tempDef.name, tempDef.rest);
+        tempDef.def = calculateStat(tempDef.base, tempDef.ev.value, tempDef.level, undefined, tempDef.posNat, tempDef.negNat, tempDef.veryNat, tempDef.name, tempDef.rest);
         stuffUsed.ability1 = ability1;
     }
     if ((itemB == "Heavy Shield" && (move.mr2 == "Ranged Defense" || adaptive.mr2 == "Ranged Defense")) ||
@@ -2670,88 +2637,88 @@ function getTempAtkDef(second, mr) {
     //tempAtk
     if (mr.mr1 == "Ranged Attack") {
         if (second) {
-            tempAtk = { atk: atkR2, iv: atkRIV2, ev: atkREV2, base: baseAtkR2.value, name: "AttackR", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkRStages2.value), level: level2.value };
+            tempAtk = { atk: atkR2, ev: atkREV2, base: baseAtkR2.value, name: "AttackR", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkRStages2.value), level: level2.value };
         } else {
-            tempAtk = { atk: atkR1, iv: atkRIV1, ev: atkREV1, base: baseAtkR1.value, name: "AttackR", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkRStages1.value), level: level1.value };
+            tempAtk = { atk: atkR1, ev: atkREV1, base: baseAtkR1.value, name: "AttackR", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkRStages1.value), level: level1.value };
         }    
     }
     else if (mr.mr1 == "Melee Attack") {
         if (second) {
             if (mr.name == "Tricky Tactics") {
-                tempAtk = { atk: atk1, iv: atkIV1, ev: atkEV1, base: baseAtk1.value, name: "AttackM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkStages1.value), level: level1.value };
+                tempAtk = { atk: atk1, ev: atkEV1, base: baseAtk1.value, name: "AttackM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkStages1.value), level: level1.value };
             } else {
-                tempAtk = { atk: atk2, iv: atkIV2, ev: atkEV2, base: baseAtk2.value, name: "AttackM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkStages2.value), level: level2.value };
+                tempAtk = { atk: atk2, ev: atkEV2, base: baseAtk2.value, name: "AttackM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkStages2.value), level: level2.value };
             }
         } else {
             if (mr.name == "Tricky Tactics") {
-                tempAtk = { atk: atk2, iv: atkIV2, ev: atkEV2, base: baseAtk2.value, name: "AttackM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkStages2.value), level: level2.value };
+                tempAtk = { atk: atk2, ev: atkEV2, base: baseAtk2.value, name: "AttackM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkStages2.value), level: level2.value };
             } else {
-                tempAtk = { atk: atk1, iv: atkIV1, ev: atkEV1, base: baseAtk1.value, name: "AttackM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkStages1.value), level: level1.value };
+                tempAtk = { atk: atk1, ev: atkEV1, base: baseAtk1.value, name: "AttackM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkStages1.value), level: level1.value };
             }
         }
     }
     else if (mr.mr1 == "Ranged Defense") {
         if (second) {
-            tempAtk = { atk: defR2, iv: defRIV2, ev: defREV2, base: baseDefR2.value, name: "DefenseR", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(defRStages2.value), level: level2.value };
+            tempAtk = { atk: defR2, ev: defREV2, base: baseDefR2.value, name: "DefenseR", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(defRStages2.value), level: level2.value };
         } else {
-            tempAtk = { atk: defR1, iv: defRIV1, ev: defREV1, base: baseDefR1.value, name: "DefenseR", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(defRStages1.value), level: level1.value };
+            tempAtk = { atk: defR1, ev: defREV1, base: baseDefR1.value, name: "DefenseR", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(defRStages1.value), level: level1.value };
         }
     }
     else if (mr.mr1 == "Melee Defense") {
         if (second) {
-            tempAtk = { atk: def2, iv: defIV2, ev: defEV2, base: baseDef2.value, name: "DefenseM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(defStages2.value), level: level2.value };
+            tempAtk = { atk: def2, ev: defEV2, base: baseDef2.value, name: "DefenseM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(defStages2.value), level: level2.value };
         } else {
-            tempAtk = { atk: def1, iv: defIV1, ev: defEV1, base: baseDef1.value, name: "DefenseM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(defStages1.value), level: level1.value };
+            tempAtk = { atk: def1, ev: defEV1, base: baseDef1.value, name: "DefenseM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(defStages1.value), level: level1.value };
         }
     }
     else if (mr.mr1 == "Speed") {
         if (second) {
-            tempAtk = { atk: spd2, iv: spdIV2, ev: spdEV2, base: baseSpd2.value, name: "Speed", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(spdStages2.value), level: level2.value };
+            tempAtk = { atk: spd2, ev: spdEV2, base: baseSpd2.value, name: "Speed", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(spdStages2.value), level: level2.value };
         } else {
-            tempAtk = { atk: spd1, iv: spdIV1, ev: spdEV1, base: baseSpd1.value, name: "Speed", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(spdStages1.value), level: level1.value };
+            tempAtk = { atk: spd1, ev: spdEV1, base: baseSpd1.value, name: "Speed", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(spdStages1.value), level: level1.value };
         }
     }
     else {
-        tempAtk = { atk: spd2, iv: spdIV2, ev: spdEV2, base: baseSpd2.value, name: "Speed", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(spdStages2.value), level: level2.value };
+        tempAtk = { atk: spd2, ev: spdEV2, base: baseSpd2.value, name: "Speed", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(spdStages2.value), level: level2.value };
     }
     //tempDef
     if (mr.mr2 == "Ranged Attack") {
         if (second) {
-            tempDef = { def: atkR1, iv: atkRIV1, ev: atkREV1, base: baseAtkR1.value, name: "AttackR", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkRStages1.value), level: level1.value, rest: rest1 };
+            tempDef = { def: atkR1, ev: atkREV1, base: baseAtkR1.value, name: "AttackR", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkRStages1.value), level: level1.value, rest: rest1 };
         } else {
-            tempDef = { def: atkR2, iv: atkRIV2, ev: atkREV2, base: baseAtkR2.value, name: "AttackR", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkRStages2.value), level: level2.value, rest: rest2 };
+            tempDef = { def: atkR2, ev: atkREV2, base: baseAtkR2.value, name: "AttackR", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkRStages2.value), level: level2.value, rest: rest2 };
         }
     }
     else if (mr.mr2 == "Melee Attack") {
         if (second) {
-            tempDef = { def: atk1, iv: atkIV1, ev: atkEV1, base: baseAtk1.value, name: "AttackM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkStages1.value), level: level1.value, rest: rest1 };
+            tempDef = { def: atk1, ev: atkEV1, base: baseAtk1.value, name: "AttackM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(atkStages1.value), level: level1.value, rest: rest1 };
         } else {
-            tempDef = { def: atk2, iv: atkIV2, ev: atkEV2, base: baseAtk2.value, name: "AttackM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkStages2.value), level: level2.value, rest: rest2 };
+            tempDef = { def: atk2, ev: atkEV2, base: baseAtk2.value, name: "AttackM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(atkStages2.value), level: level2.value, rest: rest2 };
         }
     }
     else if (mr.mr2 == "Ranged Defense") {
         if (second) {
-            tempDef = { def: defR1, iv: defRIV1, ev: defREV1, base: baseDefR1.value, name: "DefenseR", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(defRStages1.value), level: level1.value, rest: rest1 };
+            tempDef = { def: defR1, ev: defREV1, base: baseDefR1.value, name: "DefenseR", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(defRStages1.value), level: level1.value, rest: rest1 };
         } else {
-            tempDef = { def: defR2, iv: defRIV2, ev: defREV2, base: baseDefR2.value, name: "DefenseR", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(defRStages2.value), level: level2.value, rest: rest2 };
+            tempDef = { def: defR2, ev: defREV2, base: baseDefR2.value, name: "DefenseR", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(defRStages2.value), level: level2.value, rest: rest2 };
         }
     }
     else if (mr.mr2 == "Melee Defense") {
         if (second) {
-            tempDef = { def: def1, iv: defIV1, ev: defEV1, base: baseDef1.value, name: "DefenseM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(defStages1.value), level: level1.value, rest: rest1 };
+            tempDef = { def: def1, ev: defEV1, base: baseDef1.value, name: "DefenseM", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(defStages1.value), level: level1.value, rest: rest1 };
         } else {
-            tempDef = { def: def2, iv: defIV2, ev: defEV2, base: baseDef2.value, name: "DefenseM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(defStages2.value), level: level2.value, rest: rest2 };
+            tempDef = { def: def2, ev: defEV2, base: baseDef2.value, name: "DefenseM", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(defStages2.value), level: level2.value, rest: rest2 };
         }
     }
     else if (mr.mr2 == "Speed") {
         if (second) {
-            tempDef = { def: spd1, iv: spdIV1, ev: spdEV1, base: baseSpd1.value, name: "Speed", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(spdStages1.value), level: level1.value, rest: rest1 };
+            tempDef = { def: spd1, ev: spdEV1, base: baseSpd1.value, name: "Speed", posNat: posNat1, negNat: negNat1, veryNat: veryNat1, stage: parseInt(spdStages1.value), level: level1.value, rest: rest1 };
         } else {
-            tempDef = { def: spd2, iv: spdIV2, ev: spdEV2, base: baseSpd2.value, name: "Speed", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(spdStages2.value), level: level2.value, rest: rest2 };
+            tempDef = { def: spd2, ev: spdEV2, base: baseSpd2.value, name: "Speed", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(spdStages2.value), level: level2.value, rest: rest2 };
         }
     }
     else {
-        tempDef = { def: spd2, iv: spdIV2, ev: spdEV2, base: baseSpd2.value, name: "Speed", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(spdStages2.value), level: level2.value, rest: rest2 };
+        tempDef = { def: spd2, ev: spdEV2, base: baseSpd2.value, name: "Speed", posNat: posNat2, negNat: negNat2, veryNat: veryNat2, stage: parseInt(spdStages2.value), level: level2.value, rest: rest2 };
     }
 
     return { attack: tempAtk, defense: tempDef };
@@ -2896,7 +2863,7 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
     
     if (!loom2.types.includes("Plant") && sap.defender == true) {
         newHP += Math.floor(hp1 * 1 / 8);
-        hazardString += "sap plant damage and ";
+        hazardString += "glow sap damage and ";
     }
 
     if (bloodDrain.defender == true) {
@@ -2927,7 +2894,7 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
     if (!OHKO) {
         if (!loom1.types.includes("Plant") && sap.attacker == true) {
             newHP -= Math.floor(hp2 * 1 / 8 * multi);
-            hazardString += "sap plant recovery and ";
+            hazardString += "glow sap recovery and ";
         }
         if (bloodDrain.attacker == true) {
             newHP -= Math.floor(hp2 * 1 / 8 * multi);

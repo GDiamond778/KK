@@ -416,7 +416,8 @@ var moves = {
         mr: "Melee",
         mr1: "Melee Attack",
         mr2: "Melee Defense",
-        contact: true
+        contact: true,
+        hits: 2
     },
 
     steelStrike: {
@@ -476,7 +477,8 @@ var moves = {
         mr: "Melee",
         mr1: "Melee Attack",
         mr2: "Melee Defense",
-        contact: true
+        contact: true,
+        drain: 1/2
     },
 
     shriek: {
@@ -490,233 +492,94 @@ var moves = {
         mr2: "Ranged Defense",
     },
 
-    shriek: {
-        name: "Shriek",
-        power: 40,
-        energy: 20,
+    flare: {
+        name: "Flare",
+        power: 55,
+        energy: 40,
         accuracy: 100,
-        type: "Balance",
+        type: "Fire",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+    
+    flashFire: {
+        name: "Flash Fire",
+        power: 40,
+        energy: 50,
+        accuracy: 100,
+        type: "Fire",
         mr: "Ranged",
         mr1: "Ranged Attack",
         mr2: "Ranged Defense",
     },
 
-    spray: {
-        name: "Spray",
+    razzle: {
+        name: "Razzle",
+        power: 45,
+        energy: 35,
+        accuracy: 100,
+        type: "Insect",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    hazer: {
+        name: "Hazer",
         power: 40,
-        energy: 20,
+        energy: 35,
+        accuracy: 100,
+        type: "Light",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    magicGem: {
+        name: "Magic Gen",
+        power: 50,
+        energy: 50,
+        accuracy: 100,
+        type: "Light",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    waterGush: {
+        name: "Water Gush",
+        power: 60,
+        energy: 45,
         accuracy: 100,
         type: "Water",
         mr: "Ranged",
         mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
+        mr2: "Ranged Defense",
     },
 
-    shine: {
-        name: "Shine",
-        power: 40,
-        energy: 20,
+    waterSpritz: {
+        name: "Water Spritz",
+        power: 20,
+        energy: 40,
         accuracy: 100,
-        type: "Light",
-        mr: "Ranged",
-        mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
-    },
-
-    novaBlast: {
-        name: "Nova Blast",
-        power: 95,
-        energy: 52,
-        accuracy: 100,
-        type: "Light",
+        type: "Water",
         mr: "Ranged",
         mr1: "Ranged Attack",
         mr2: "Ranged Defense",
-        secondaryEffect: true
+        hits: 4
     },
 
-    lightspeedRay: {
-        name: "Lightspeed Ray",
-        power: 40,
-        energy: 25,
-        accuracy: 100,
-        type: "Light",
-        mr: "Ranged",
-        mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
-    },
-
-    gnaw: {
-        name: "Gnaw",
-        power: 40,
-        energy: 15,
-        accuracy: 100,
-        type: "Typeless",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true,
-        bite: true
-    },
-
-    chomp: {
-        name: "Chomp",
-        power: 45,
-        energy: 20,
-        accuracy: 100,
-        type: "Dark",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true,
-        secondaryEffect: true,
-        bite: true
-    },
-
-    hornDashi: {
-        name: "Horn-Dashi",
+    whirl: {
+        name: "Whirl",
         power: 60,
-        energy: 40,
-        accuracy: 100,
-        type: "Brawler",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true,
-    },
-
-    blindspotBatter: {
-        name: "Blindspot Batter",
-        power: 75,
-        energy: 38,
-        accuracy: 100,
-        type: "Light",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true,
-    },
-
-    headacheSplit: {
-        name: "Headache Split",
-        power: 60,
-        energy: 40,
-        accuracy: 100,
-        type: "Mind",
-        mr: "Ranged",
-        mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
-    },
-
-    mudslide: {
-        name: "Mudslide",
-        power: 70,
-        energy: 40,
-        accuracy: 100,
-        type: "Earth",
-        mr: "Ranged",
-        mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
-    },
-
-    dazzlingBarrage: {
-        name: "Dazzling Barrage",
-        power: 25,
-        energy: 25,
-        accuracy: 100,
-        type: "Light",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true,
-        hits: 5
-    },
-
-    stratagem: {
-        name: "Stratagem",
-        power: 80,
-        energy: 40,
-        accuracy: 100,
-        type: "Mind",
-        mr: "Ranged",
-        mr1: "Ranged Defense",
-        mr2: "Ranged Defense"
-    },
-
-    pepJab: {
-        name: "Pep Jab",
-        power: 80,
-        energy: 55,
-        accuracy: 100,
-        type: "Brawler",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true,
-        punch: true,
-        regen: 1/5
-    },
-
-    powerDraw: {
-        name: "Power Draw",
-        power: 80,
-        energy: 55,
-        accuracy: 100,
-        type: "Electric",
-        mr: "Ranged",
-        mr1: "Ranged Attack",
-        mr2: "Ranged Defense",
-        regen: 1/5
-    },
-
-    megaKick: {
-        name: "Mega Kick",
-        power: 90,
         energy: 45,
-        accuracy: 90,
-        type: "Brawler",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true
-    },
-
-    highPitchScreech: {
-        name: "High-Pitch Screech",
-        power: 80,
-        energy: 40,
         accuracy: 100,
-        type: "Typeless",
-        mr: "Ranged",
-        mr1: "Ranged Attack",
-        mr2: "Ranged Defense",
-        sound: true,
-        secondaryEffect: true
-    },
-
-    jolt: {
-        name: "Jolt",
-        power: 40,
-        energy: 25,
-        accuracy: 100,
-        type: "Electric",
+        type: "Insect",
         mr: "Ranged",
         mr1: "Ranged Attack",
         mr2: "Ranged Defense",
     },
-
-    zipZap: {
-        name: "Zip-Zap",
-        power: 70,
-        energy: 50,
-        accuracy: 100,
-        type: "Electric",
-        mr: "Ranged",
-        mr1: "Ranged Attack",
-        mr2: "Ranged Defense",
-    },
-
-
 
     //Support Moves -----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -725,417 +588,124 @@ var moves = {
         power: 0,
         energy: 0,
         accuracy: 100,
-        type: "Typeless",
+        type: "Balance",
         mr: "Support"
     },
 
-    summon: {
-        name: "Summon",
+    innerFocus: {
+        name: "Inner Focus",
         power: 0,
         energy: 25,
         accuracy: 100,
-        type: "Typeless",
+        type: "Balance",
         mr: "Support"
     },
 
-    aim: {
-        name: "Aim",
+    neutralize: {
+        name: "Neutralize",
+        power: 0,
+        energy: 30,
+        accuracy: 100,
+        type: "Balance",
+        mr: "Support"
+    },
+
+    stare: {
+        name: "Stare",
         power: 0,
         energy: 10,
-        accuracy: "N/A",
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    ancientRoar: {
-        name: "Ancient Roar",
-        power: 0,
-        energy: 50,
         accuracy: 100,
-        type: "Ancient",
-        mr: "Support",
-        sound: true
-    },
-
-    brace: {
-        name: "Brace",
-        power: 0,
-        energy: 15,
-        accuracy: "N/A",
-        type: "Typeless",
+        type: "Balance",
         mr: "Support"
     },
 
-    burrow: {
-        name: "Burrow",
+    startle: {
+        name: "Startle",
         power: 0,
-        energy: 15,
+        energy: 10,
+        accuracy: 100,
+        type: "Balance",
+        mr: "Support"
+    },
+
+    neutralize: {
+        name: "Neutralize",
+        power: 0,
+        energy: 30,
+        accuracy: 100,
+        type: "Balance",
+        mr: "Support"
+    },
+
+    earthVeil: {
+        name: "Earth Veil",
+        power: 0,
+        energy: 25,
         accuracy: "N/A",
         type: "Earth",
         mr: "Support"
     },
 
-    tamp: {
-        name: "Tamp",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Earth",
-        mr: "Support"
-    },
-
-    charade: {
-        name: "Charade",
-        power: 0,
-        energy: 25,
-        accuracy: 100,
-        type: "Dark",
-        mr: "Support"
-    },
-
-    dawdle: {
-        name: "Dawdle",
-        power: 0,
-        energy: 10,
-        accuracy: 100,
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    disperse: {
-        name: "Disperse",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Light",
-        mr: "Support"
-    },
-
-    flash: {
-        name: "Flash",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Light",
-        mr: "Support"
-    },
-
-    dodge: {
-        name: "Dodge",
-        power: 0,
-        energy: 20,
-        accuracy: "N/A",
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    recycle: {
-        name: "Recycle",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    eerieStare: {
-        name: "Eerie Stare",
-        power: 0,
-        energy: 25,
-        accuracy: 100,
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    energize: {
-        name: "Energize",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Electric",
-        mr: "Support"
-    },
-
-    examine: {
-        name: "Examine",
-        power: 0,
-        energy: 15,
-        accuracy: "N/A",
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    finalRuse: {
-        name: "Final Ruse",
-        power: 0,
-        energy: 40,
-        accuracy: "N/A",
-        type: "Spirit",
-        mr: "Support"
-    },
-
-    growl: {
-        name: "Growl",
-        power: 0,
-        energy: 10,
-        accuracy: 100,
-        type: "Typeless",
-        mr: "Support",
-        sound: true
-    },
-
-    icicleTrap: {
-        name: "Icicle Trap",
-        power: 0,
-        energy: 45,
-        accuracy: "N/A",
-        type: "Ice",
-        mr: "Support"
-    },
-
-    mindsEye: {
-        name: "Mind's Eye",
-        power: 0,
-        energy: 15,
-        accuracy: "N/A",
-        type: "Mind",
-        mr: "Support"
-    },
-
-    peaceOfMind: {
-        name: "Peace Of Mind",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Mind",
-        mr: "Support"
-    },
-
-    perch: {
-        name: "Perch",
-        power: 0,
-        energy: 72,
-        accuracy: "N/A",
-        type: "Air",
-        mr: "Support"
-    },
-
-    gust: {
-        name: "Gust",
+    chrysalisCrease: {
+        name: "Chrysalis Crease",
         power: 0,
         energy: 20,
         accuracy: 100,
-        type: "Air",
+        type: "Insect",
         mr: "Support"
     },
 
-
-    poison: {
-        name: "Poison",
+    fluster: {
+        name: "Fluster",
         power: 0,
-        energy: 25,
-        accuracy: 90,
-        type: "Toxic",
-        mr: "Support"
-    },
-
-    poisonBarbs: {
-        name: "Poison Barbs",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Toxic",
-        mr: "Support"
-    },
-
-    powerFocus: {
-        name: "Power Focus",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    provoke: {
-        name: "Provoke",
-        power: 0,
-        energy: 25,
+        energy: 15,
         accuracy: 100,
-        type: "Dark",
+        type: "Insect",
         mr: "Support"
     },
 
-    revival: {
-        name: "Revival",
-        power: 0,
-        energy: 72,
-        accuracy: "N/A",
-        type: "Spirit",
-        mr: "Support"
-    },
-
-    sapPlant: {
-        name: "Sap Plant",
+    vivify: {
+        name: "Vivify",
         power: 0,
         energy: 35,
-        accuracy: 90,
-        type: "Plant",
+        accuracy: 100,
+        type: "Light",
         mr: "Support"
     },
 
-    scapeGoat: {
-        name: "Scapegoat",
-        power: 0,
-        energy: 0,
-        accuracy: "N/A",
-        type: "Typeless",
-        mr: "Support",
-        contact: true
-    },
-
-    sharpen: {
-        name: "Sharpen",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Dark",
-        mr: "Support"
-    },
-
-    snoreSpores: {
-        name: "Snore Spores",
+    waterWall: {
+        name: "Water Wall",
         power: 0,
         energy: 40,
-        accuracy: 75,
-        type: "Plant",
-        mr: "Support"
-    },
-
-    softWater: {
-        name: "Soft Water",
-        power: 0,
-        energy: 60,
         accuracy: "N/A",
         type: "Water",
         mr: "Support"
     },
 
-
-    ancientInstinct: {
-        name: "Ancient Instinct",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Ancient",
-        mr: "Support"
-    },
-    
-    jumpStart: {
-        name: "Jump Start",
-        power: 0,
-        energy: 40,
-        accuracy: "N/A",
-        type: "Electric",
-        mr: "Support"
-    },
-    
-    barter: {
-        name: "Barter",
-        power: 0,
-        energy: 50,
-        accuracy: 100,
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    brawnBoost: {
-        name: "Brawn Boost",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Brawler",
-        mr: "Support"
-    },
-
-    molt: {
-        name: "Molt",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Bug",
-        mr: "Support"
-    },
-
-    baffle: {
-        name: "Baffle",
-        power: 0,
-        energy: 50,
-        accuracy: 100,
-        type: "Dark",
-        mr: "Support"
-    },
-
-    phoenixFlame: {
-        name: "Phoenix Flame",
-        power: 0,
-        energy: 0,
-        accuracy: "N/A",
-        type: "Fire",
-        mr: "Support"
-    },
-
-    squareOne: {
-        name: "Square One",
-        power: 0,
-        energy: 40,
-        accuracy: "N/A",
-        type: "Dark",
-        mr: "Support"
-    },
-
-    bulkUp: {
-        name: "Bulk Up",
-        power: 0,
-        energy: 25,
-        accuracy: "N/A",
-        type: "Brawler",
-        mr: "Support"
-    },
-
-    talentTrade: {
-        name: "Talent Trade",
-        power: 0,
-        energy: 40,
-        accuracy: "N/A",
-        type: "Dark",
-        mr: "Support"
-    },
-
-    bait: {
-        name: "Bait",
-        power: 0,
-        energy: 30,
-        accuracy: "N/A",
-        type: "Typeless",
-        mr: "Support"
-    },
-
-    bequeath: {
-        name: "Bequeath",
+    rootGrasp: {
+        name: "Root Grasp",
         power: 0,
         energy: 50,
         accuracy: "N/A",
-        type: "Typeless",
+        type: "Wood",
         mr: "Support"
     },
 
-    spite: {
-        name: "Spite",
+    leafShroud: {
+        name: "Leaf Shroud",
         power: 0,
-        energy: 40,
-        accuracy: 90,
-        type: "Dark",
+        energy: 25,
+        accuracy: "N/A",
+        type: "Wood",
+        mr: "Support"
+    },
+
+    xylem: {
+        name: "Xylem",
+        power: 0,
+        energy: 80,
+        accuracy: "N/A",
+        type: "Wood",
         mr: "Support"
     },
 
