@@ -1,4 +1,4 @@
-const STAB = 1.25;
+const STAB = 1.5;
 
 var pokeDropdown1 = document.getElementById("pokes1");
 var pokeDropdown2 = document.getElementById("pokes2");
@@ -544,7 +544,7 @@ function update(updatePower = false, updateBaseStats = false) {
     }
     halfIce2.onclick = function() {changeButton(halfIce2)};
 
-    if (abilityDropdown1.value == "Combustible" || abilityDropdown1.value == "Noxious Weeds" || abilityDropdown1.value == "Coursing Venom" || abilityDropdown1.value == "Prismatic" || abilityDropdown1.value == "Toxic Filter") {
+    if (abilityDropdown1.value == "Combustible" || abilityDropdown1.value == "Noxious Weeds" || abilityDropdown1.value == "Coursing Venom" || abilityDropdown1.value == "Prismatic"|| abilityDropdown1.value == "Rise" || abilityDropdown1.value == "Light Show" || abilityDropdown1.value == "Toxic Filter") {
         immuneAbilityBoost1.style.visibility = "visible";
     }
     else {
@@ -552,7 +552,7 @@ function update(updatePower = false, updateBaseStats = false) {
         immuneAbilityBoost1.checked = false;
     }
 
-    if (abilityDropdown2.value == "Combustible" || abilityDropdown2.value == "Noxious Weeds" || abilityDropdown2.value == "Coursing Venom" || abilityDropdown2.value == "Prismatic" || abilityDropdown2.value == "Toxic Filter") {
+    if (abilityDropdown2.value == "Combustible" || abilityDropdown2.value == "Noxious Weeds" || abilityDropdown2.value == "Coursing Venom" || abilityDropdown2.value == "Prismatic" || abilityDropdown2.value == "Rise" || abilityDropdown1.value == "Light Show" || abilityDropdown2.value == "Toxic Filter") {
         immuneAbilityBoost2.style.visibility = "visible";
     }
     else {
@@ -883,10 +883,13 @@ function loadBaseStats(side) {
     let secondLoom = loomians[pokeDropdown2.value.toLowerCase()];
     let ability1 = abilities.find((x) => x == abilityDropdown1.value);
     let ability2 = abilities.find((x) => x == abilityDropdown2.value);
+    
+    
     tempAbility1 = abilities.find((x) => x == abilityDropdown1.value);
     tempAbility2 = abilities.find((x) => x == abilityDropdown2.value);
     
     if (side == 1 || side == undefined) {
+        let isAbilityChecked = immuneAbilityBoost1.checked;
         baseHP1.value = firstLoom.baseStats.hp;
         baseEnergy1.value = firstLoom.baseStats.energy;
         baseAtk1.value = firstLoom.baseStats.attack;
@@ -900,8 +903,17 @@ function loadBaseStats(side) {
             baseAtkR1.value = firstLoom.baseStats.attack;
             baseDefR1.value = firstLoom.baseStats.defense;
         }
+        if (ability1 == "Armor Swap") {
+            baseDef1.value = firstLoom.baseStats.defenseR;
+            baseDefR1.value = firstLoom.baseStats.defense;
+        }
+        if (ability1 == "Rise" && isAbilityChecked) {
+            baseAtkR1.value *= 1.5;
+        }
+        
     }
     if (side == 2 || side == undefined) {
+        let isAbilityChecked =  immuneAbilityBoost2.checked;
         baseHP2.value = secondLoom.baseStats.hp;
         baseEnergy2.value = secondLoom.baseStats.energy;
         baseAtk2.value = secondLoom.baseStats.attack;
@@ -914,6 +926,13 @@ function loadBaseStats(side) {
             baseDef2.value = secondLoom.baseStats.defenseR;
             baseAtkR2.value = secondLoom.baseStats.attack;
             baseDefR2.value = secondLoom.baseStats.defense;
+        }
+        if (ability2 == "Armor Swap") {
+            baseDef2.value = secondLoom.baseStats.defenseR;
+            baseDefR2.value = secondLoom.baseStats.defense;
+        }
+        if (ability2 == "Rise" && isAbilityChecked) {
+            baseAtkR2.value *= 1.5;
         }
     }
 }
@@ -1095,14 +1114,18 @@ function calculateStat(base, EV, level, isHP = false, posNat, negNat, veryNat, n
 
     level = parseInt(level);
     if (isHP) {
-        return Math.floor((2 * base + Math.floor(EV / 4)) * level / 100) + level + 10;
+        return Math.ceil((((2 * base) + (20 * EV) + 10) * level / 40 + 5) * 1.5);
+       //LL return Math.floor((2 * base + Math.floor(EV / 4)) * level / 100) + level + 10;
     }
 
     if (isEnergy) {
-        stat = Math.floor(Math.floor(2 * base + Math.floor(EV / 4)) * level / 65 + 80);
+       //2x HP =  stat =  Math.ceil((((2 * base) + (20 * EV) + 10) * level / 40 + 5) * 1.5) * 2;
+       stat = Math.ceil((((2 * base) + (20 * EV) + 10) * level / 40 + 5) * 2);
+        //LL stat = Math.floor(Math.floor(2 * base + Math.floor(EV / 4)) * level / 65 + 80);
     }
     else {
-        stat = Math.floor(Math.floor((2 * base + Math.floor(EV / 4)) * level / 100 + 5));
+        stat = Math.ceil(((2 * base) + (10 * EV) + 10) * level / 100 + 5);
+       //LL stat = Math.floor(Math.floor((2 * base + Math.floor(EV / 4)) * level / 100 + 5));
     }
 
     if (posNat == "brawny" && name == "AttackM") {
@@ -1431,7 +1454,23 @@ function calculateDamage(moveOne1, moveTwo1, moveThree1, moveFour1, moveOne2, mo
         loadBaseStats(1);
         loadStats();
     }
+    if ((tempAbility1 != ability1 && (tempAbility1 == "Armor Swap" || ability1 == "Armor Swap"))) {
+        loadBaseStats(1);
+        loadStats();
+    }
+    if ((tempAbility1 != ability1 && (tempAbility1 == "Rise" || ability1 == "Rise"))) {
+        loadBaseStats(1);
+        loadStats();
+    }
     if ((tempAbility2 != ability2 && (tempAbility2 == "Idiosyncratic" || ability2 == "Idiosyncratic"))) {
+        loadBaseStats(2);
+        loadStats();
+    }
+    if ((tempAbility2 != ability2 && (tempAbility2 == "Armor Swap" || ability2 == "Armor Swap"))) {
+        loadBaseStats(2);
+        loadStats();
+    }
+    if ((tempAbility2 != ability2 && (tempAbility2 == "Rise" || ability2 == "Rise"))) {
         loadBaseStats(2);
         loadStats();
     }
@@ -2164,7 +2203,9 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     }
 
     if (ability1 == "Idiosyncratic") stuffUsed.ability1 = ability1;
+    if (ability1 == "Armor Swap") stuffUsed.ability1 = ability1;
     if (ability2 == "Idiosyncratic") stuffUsed.ability2 = ability2;
+    if (ability2 == "Armor Swap") stuffUsed.ability2 = ability2;
 
     if ((ability1 == "Devious") || 
        (ability1 == "Bully" && loom1.height > loom2.height)) {
@@ -2223,13 +2264,18 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 1.2;
         stuffUsed.ability1 = ability1;
     }
+    else if (ability1 == "Insectify" && tempType == "Balance") {
+        tempType = "Insect";
+        multi *= 1.1;
+        stuffUsed.ability1 = ability1;
+    }
     else if (ability1 == "Turbulent" && tempType == "Typeless") {
         tempType = "Air";
         multi *= 1.2;
         stuffUsed.ability1 = ability1;
     }
 
-    if ((ability1 == "Combustible" || ability1 == "Coursing Venom" || ability1 == "Noxious Weeds" || ability1 == "Prismatic") && immuneBoostCheck1) {
+    if ((ability1 == "Combustible" || ability1 == "Coursing Venom" || ability1 == "Noxious Weeds" || ability1 == "Prismatic" || ability1 == "Light Show") && immuneBoostCheck1) {
         if (tempType == typeModAbility1.typeModifier.type) {
             multi *= 1.5;
             stuffUsed.ability1 = ability1;
@@ -2240,6 +2286,13 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
             multi *= 1.5;
             stuffUsed.ability1 = ability1;
         }
+    }
+
+    if (ability1 == "Rise" && immuneBoostCheck1) {
+        
+            multi *= 1.5;
+            stuffUsed.ability1 = ability1;
+        
     }
 
     if ((ability1 == "Ambush" && btl1 && withoutSlapDown && move.name != "Chase Down") ||
@@ -2298,6 +2351,18 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 1.5;
         stuffUsed.item2 = itemB;
         stuffUsed.ability2 = (ability2 == "Clingy" ? ability2 : stuffUsed.ability2);
+    }
+    else if (ability1 == "Sly" && move.knockOff == true) {
+        tempItem = (second == false ? item2.value : item1.value);
+        if (tempItem != "None" && withoutSlapDown) {
+            multi *= 1.5;
+            stuffUsed.item2 = tempItem;
+        }
+    }
+    if (itemB != "None" && move.knockOff == true && (withoutSlapDown || ability2 == "Hoarder")) {
+        multi *= 1.5;
+        stuffUsed.item2 = itemB;
+        stuffUsed.ability2 = (ability2 == "Hoarder" ? ability2 : stuffUsed.ability2);
     }
     else if (ability1 == "Sly" && move.knockOff == true) {
         tempItem = (second == false ? item2.value : item1.value);
@@ -2420,7 +2485,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     tempDef.def = pokeRound(tempDef.def * multi);
     multi = 1;
 
-    dmg = Math.floor(Math.floor(dmg * tempAtk.atk / tempDef.def * tempPower) / 50) + 2;
+    dmg = Math.floor(Math.floor(dmg * tempAtk.atk * tempPower/ tempDef.def ) / 50) + 2;
 
     if (isDouble && move.aoe == true) {
         multi *= 0.75;
@@ -2444,8 +2509,8 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     }
 
     if (detailed) {
-        for (let i = 0.85; i <= 1; i += 0.01) {
-            possibleDmg.push(Math.floor(dmg * multi * i));
+        for (let i = 217; i <= 255; i += 1) {
+            possibleDmg.push(Math.floor(dmg * multi * i/255));
         }
     }
 
@@ -2564,6 +2629,9 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 0.5;
     }
 
+    if (stat1 == "frozen" && move.mr == "Ranged" && move.name != "Ill Will" && ability1 != "Vigorous" && ability1 != "Aqua Body" && types1.primary != "Ice" && types1.secondary != "Ice") {
+        multi *= 0.5;
+    }
     if (detailed) {
         for (let i = 0; i < possibleDmg.length; i++) {
             possibleDmg[i] = Math.floor(possibleDmg[i] * multi);
@@ -2584,6 +2652,10 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         stuffUsed.item2 = itemB;
     }
     if (effectiveness > 1 && ability2 == "Enchanted Coat") {
+        multi *= 0.75;
+        stuffUsed.ability2 = ability2;
+    }
+    if (effectiveness > 1 && ability2 == "Dampen") {
         multi *= 0.75;
         stuffUsed.ability2 = ability2;
     }
@@ -2857,13 +2929,16 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
     if (ability == "Drainage") {
         multi *= 1.5;
     }
+    if (ability == "Sapper") {
+        multi *= 1.25;
+    }
     if (item == "Drain Orb") {
         multi *= 1.2;
     }
     
     if (!loom2.types.includes("Plant") && sap.defender == true) {
         newHP += Math.floor(hp1 * 1 / 8);
-        hazardString += "glow sap damage and ";
+        hazardString += "root grasp damage and ";
     }
 
     if (bloodDrain.defender == true) {
@@ -2882,8 +2957,8 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
     }
 
     if (buzzolen) {
-        newHP += Math.floor(hp1 * 1 / 16);
-        hazardString += "stinger damage and ";
+        newHP += Math.floor(hp1 * 3 / 100);
+        hazardString += "mutle bite damage and ";
     }
 
     if (ability == "Appetite") {
@@ -2894,7 +2969,7 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
     if (!OHKO) {
         if (!loom1.types.includes("Plant") && sap.attacker == true) {
             newHP -= Math.floor(hp2 * 1 / 8 * multi);
-            hazardString += "glow sap recovery and ";
+            hazardString += "root grasp recovery and ";
         }
         if (bloodDrain.attacker == true) {
             newHP -= Math.floor(hp2 * 1 / 8 * multi);
@@ -2905,7 +2980,13 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
             hazardString += "soft water recovery and "
         }
         if (item == "Health Amulet") {
-            newHP -= Math.floor(hp1 * 1 / 16);
+            
+            if (ability == "Sapper") {
+                newHP -= Math.floor(hp1 * 1 / 16 * 1.25);
+            } else {
+                newHP -= Math.floor(hp1 * 1 / 16);
+            }
+           
             hazardString += "health amulet recovery and ";
         }
     }
@@ -2940,8 +3021,9 @@ function checkIceTrap(move, l, u, hp, energy, item, ability, ability2) {
     if (move.drain) {
         let drainMI = (item == "Drain Orb" ? 1.2 : 1);
         let drainMA = (ability == "Drainage" ? 1.5 : 1); 
-        let drainL = Math.max(Math.floor(l * move.drain * drainMI * drainMA), 1);
-        let drainU = Math.max(Math.floor(u * move.drain * drainMI * drainMA), 1);
+        let drainSA = (ability == "Sapper" ? 1.25 : 1);
+        let drainL = Math.max(Math.floor(l * move.drain * drainMI * drainMA * drainSA), 1);
+        let drainU = Math.max(Math.floor(u * move.drain * drainMI * drainMA * drainSA), 1);
         if (ability2 == "Ungracious Host") return " (" + (drainL / hp * 100).toFixed(1) + " - " + (drainU / hp * 100).toFixed(1) + "% recoil damage)";
         return " (" + (drainL / hp * 100).toFixed(1) + " - " + (drainU / hp * 100).toFixed(1) + "% recovered)";
     }

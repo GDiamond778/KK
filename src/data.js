@@ -924,7 +924,6 @@ var typeModAbilities = {
         
     },
     
-    
     coursingVenom: {
         name: "Coursing Venom",
         typeModifier: { type: "Toxic", modifier: 0 },
@@ -937,12 +936,42 @@ var typeModAbilities = {
         powerMod: false
     },
     
+    stormbreaker: {
+        name: "Stormbreaker",
+        typeModifier: { type: "Lightning", modifier: 0 },
+        powerMod: false
+    },
+
+    windWalker: {
+        name: "Wind Walker",
+        typeModifier: { type: "Wind", modifier: 0 },
+        powerMod: false
+    },
+
+    glowSap: {
+        name: "Glow Sap",
+        typeModifier: { type: "Light", modifier: 0 },
+        powerMod: false
+    },
+
     prismatic: {
         name: "Prismatic",
         typeModifier: { type: "Light", modifier: 0 },
         powerMod: false
     },
     
+    lightShow: {
+        name: "Light Show",
+        typeModifier: { type: "Light", modifier: 1 },
+        powerMod: false
+    },
+
+    rise: {
+        name: "Rise",
+        typeModifier: { type: "Balance", modifier: 1 }, //type doesnt matter, its being ignored
+        powerMod: false
+    },
+
     woodsman: {
         name: "Woodsman",
         typeModifier: { type: "Plant", modifier: 0 },
@@ -1034,14 +1063,15 @@ var typeModAbilities = {
     },
 }
 
-var items = ["Heavy Shield", "Heavy Armor", "Power Cuffs", "Health Amulet", "Drain Orb", "Mystic Wand", "Drop of Youth", "Energy Orb", "Chocolate Bar", "Mysterious Dust", "Heavy Shackles", "Thunder Orb",
-             "Volcanic Ash", "Rageful Plushie", "Clutch Plushie", "Specialty Boots", "Milkshake", "Kabunga Coffee"];
+//var items = ["Heavy Shield", "Heavy Armor", "Power Cuffs", "Health Amulet", "Drain Orb", "Mystic Wand", "Drop of Youth", "Energy Orb", "Chocolate Bar", "Mysterious Dust", "Heavy Shackles", "Thunder Orb",
+         //    "Volcanic Ash", "Rageful Plushie", "Clutch Plushie", "Specialty Boots", "Milkshake", "Kabunga Coffee"];
 
-for (let ty in types) {
-    items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Essence");
-    items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Pearl");
-    items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Shell");
-}
+var items = ["Testing Item"]
+//for (let ty in types) {
+ //   items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Essence");
+  //  items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Pearl");
+  //  items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Shell");
+//}
 
 var sets = [];
 
