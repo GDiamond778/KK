@@ -838,83 +838,9 @@ var types = {
       immunities: [],
       otherName: "sound",  
     },
-    
-    typeless: {
-        weaknesses: ["mind", "brawler"],
-        resistances: [],
-        immunities: [],
-        otherName: "plain"
-    },
-
-    plant: {
-        weaknesses: ["fire", "ice", "dark", "bug", "toxic"],
-        resistances: ["plant", "water", "earth", "electric", "light"],
-        immunities: ["light"],
-        otherName: "blossom"
-    },
-
-    electric: {
-        weaknesses: ["water", "earth"],
-        resistances: ["electric", "metal", "air"],
-        immunities: [],
-        otherName: "volt"
-    },
-
-    bug: {
-        weaknesses: ["ice", "air", "brawler"],
-        resistances: ["earth", "dark", "plant", "bug"],
-        immunities: [],
-        otherName: "web"
-    },
-
-    air: {
-        weaknesses: ["ice", "electric"],
-        resistances: ["brawler", "bug"],
-        immunities: ["earth"],
-        otherName: "draft"
-    },
-
-    toxic: {
-        weaknesses: ["earth", "mind"],
-        resistances: ["toxic", "plant", "brawler"],
-        immunities: [],
-        otherName: "noxious"
-    },
-
-    mind: {
-        weaknesses: ["dark", "bug", "spirit"],
-        resistances: ["light", "mind", "brawler"],
-        immunities: [],
-        otherName: "mental"
-    },
-
-    ancient: {
-        weaknesses: ["light", "metal", "ancient"],
-        resistances: ["fire", "water", "plant", "spirit", "electric"],
-        immunities: [],
-        otherName: "archaic"
-    },
-
-    brawler: {
-        weaknesses: ["air", "spirit", "mind", "toxic"],
-        resistances: ["bug", "ice"],
-        immunities: [],
-        otherName: "martial"
-    },
 };
 
-var abilities = ["Accelerate", "Armor Swap", "Armored Spine", "Avian", "Botanist", "Clamp", "Dampen", "Determination", "Dizzy", "Exoskeleton", "Glow Sap", "Greedy", "Hoarder", "Insectify", "Light Show", "Puff Up", "Reflector", "Rise", "Sapper", "Scout", "Snaked", "Static", "Stormbreaker", "Surprise", "Ability Thief", "Ace", "Adorable", "Aggressive", "Ambush", "Analyze", "Anomaly", "Applied Frustration", "Apprehension", "Aqua Body", "Awakening", "Baneful", "Bitter Touch",
-                 "Bloodsucker", "Boast", "Brute Force", "Bug Fever", "Bully", "Burglar", "Bursting Seams", "Caddie", "Chaperone", "Chill", "Circadian", "Clingy", "Clutch", "Combative", "Combustible",
-                 "Communication", "Compliant", "Confidence", "Contact Curse", "Coursing Venom", "Dawn", "Defensive Priority", "Devious", "Double Strike", "Drainage", "Driven", "Dusk", "Early Bird",
-                 "Enchant", "Enchanted Coat", "Expertise", "Finesse", "Flutter", "Frail Armor", "Frenzy", "Glide", "Guardian", "Guru", "Handy", "Hard Candy", "Harmonize", "Hasty", "Heavy Fists",
-                 "High Explosive", "Idiosyncratic", "Ignorant", "Illuminate", "Immunized", "Incandescent", "Lazy", "Life Force", "Lightning Rod", "Lucky", "Madcap", "Marksman", "Mean Spirited",
-                 "Mysterious Cloak", "Mystery Toxins", "Neutralize", "Nightmarish", "Noxious Weeds", "Odd Husk", "Overcharged", "Overshadow", "Oxidize", "Parting Gift", "Pincer Trap", "Playful",
-                 "Power Jaw", "Power Napper", "Premonition", "Prismatic", "Protective Shell", "Pyro", "Quick Recovery", "Radiance", "Raging Fire", "Razor Sharp", "Rechargeable", "Regift", "Replicate",
-                 "Repugnant", "Resilience", "Rev Up", "Salvage", "Scorching Skin", "Shakedown", "Sharp Claws", "Sharp Edges", "Sharp Focus", "Slick Shell", "Slimy", "Sly", "Specialization", "Staunch",
-                 "Sugar Rush", "Surrogate", "Swampy", "Sweet Aroma", "Sweet Touch", "Tank", "Temper", "Terrifying", "Territorial", "Thriving Pace", "Tone Deaf", "Total Eclipse", "Toxic Filter",
-                 "Toxic Spines", "Toxic Touch", "Trash Armor", "Turbulent", "Ungracious Host", "Vengeance", "Vigilant", "Vigorous", "Virtuoso", "Vivid Sight", "Volcanic", "Watcher", "Webbing",
-                 "Woodsman", "Two Face", "Insulated", "Wise", "Malware", "Fanning Flame", "Appetite", "Gummy", "Viscid", "Glutton", "Resentful", "Pitch-Black", "Master", "Reverberate", "Mystic Tone",
-                 "Dauntless", "Festive Spirit"];
+var abilities = ["Accelerate", "Armor Swap", "Armored Spine", "Avian", "Botanist", "Clamp", "Dampen", "Determination", "Dizzy", "Exoskeleton", "Glow Sap", "Greedy", "Hoarder", "Insectify", "Light Show", "Puff Up", "Reflector", "Rise", "Sapper", "Scout", "Snaked", "Static", "Stormbreaker", "Surprise"];
 
 var typeModAbilities = {
     avian: {

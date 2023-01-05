@@ -193,8 +193,8 @@ let quicksand2 = document.getElementById("quicksand2");
 let buzzolen1 = document.getElementById("buzzolen1");
 let buzzolen2 = document.getElementById("buzzolen2");
 
-let bloodDrain1 = document.getElementById("bloodDrain1");
-let bloodDrain2 = document.getElementById("bloodDrain2");
+//let bloodDrain1 = document.getElementById("bloodDrain1");
+//let bloodDrain2 = document.getElementById("bloodDrain2");
 
 let softWater1 = document.getElementById("softWater1");
 let softWater2 = document.getElementById("softWater2");
@@ -578,8 +578,8 @@ function updateItem(item) {
 
 function updateLevel() {
     if (levelCheck.checked) {
-        level1.value = 100;
-        level2.value = 100;
+        level1.value = 10;
+        level2.value = 10;
         update();
     } else {
         level1.value = 50;
@@ -2880,7 +2880,7 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
     barbs = [~~$("input:radio[name='barbsL']:checked").val(), ~~$("input:radio[name='barbsR']:checked").val()];
     let barb = barbs[1];
     let sap = { attacker: sapPlant1.checked, defender: sapPlant2.checked };
-    let bloodDrain = { attacker: bloodDrain1.checked, defender: bloodDrain2.checked };
+    //let bloodDrain = { attacker: bloodDrain1.checked, defender: bloodDrain2.checked };
     let pestilence = pestilence2.checked;
     let quicksand = quicksand2.checked;
     let buzzolen = buzzolen2.checked;
@@ -2892,7 +2892,7 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
         halfIce = halfIce1.checked;
         barb = barbs[0];
         sap = { attacker: sapPlant2.checked, defender: sapPlant1.checked };
-        bloodDrain = { attacker: bloodDrain2.checked, defender: bloodDrain1.checked };
+        //bloodDrain = { attacker: bloodDrain2.checked, defender: bloodDrain1.checked };
         pestilence = pestilence1.checked;
         quicksand = quicksand1.checked;
         buzzolen = buzzolen1.checked;
@@ -2941,10 +2941,10 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
         hazardString += "root grasp damage and ";
     }
 
-    if (bloodDrain.defender == true) {
-        newHP += Math.floor(hp1 * 1 / 8);
-        hazardString += "blood drain damage and ";
-    }
+    //if (bloodDrain.defender == true) {
+      //  newHP += Math.floor(hp1 * 1 / 8);
+        //hazardString += "blood drain damage and ";
+    //}
 
     if (pestilence) {
         newHP += Math.floor(hp1 * 1 / 8);
@@ -2971,10 +2971,10 @@ function adjustHP(loom1, loom2, hp1, hp2, item, ability, status, second = false,
             newHP -= Math.floor(hp2 * 1 / 8 * multi);
             hazardString += "root grasp recovery and ";
         }
-        if (bloodDrain.attacker == true) {
-            newHP -= Math.floor(hp2 * 1 / 8 * multi);
-            hazardString += "blood drain recovery and ";
-        }
+       // if (bloodDrain.attacker == true) {
+         //   newHP -= Math.floor(hp2 * 1 / 8 * multi);
+           // hazardString += "blood drain recovery and ";
+        //}
         if (softWater) {
             newHP -= Math.floor(hp1 * 1 / 8);
             hazardString += "soft water recovery and "
