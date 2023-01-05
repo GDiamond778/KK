@@ -199,20 +199,20 @@ let buzzolen2 = document.getElementById("buzzolen2");
 let softWater1 = document.getElementById("softWater1");
 let softWater2 = document.getElementById("softWater2");
 
-let smackDown1 = document.getElementById("smackDown1");
-let smackDown2 = document.getElementById("smackDown2");
+//let smackDown1 = document.getElementById("smackDown1");
+//let smackDown2 = document.getElementById("smackDown2");
 
-let dusk1 = document.getElementById("dusk1");
-let dusk2 = document.getElementById("dusk2");
+//let dusk1 = document.getElementById("dusk1");
+//let dusk2 = document.getElementById("dusk2");
 
-let dawn1 = document.getElementById("dawn1");
-let dawn2 = document.getElementById("dawn2");
+//let dawn1 = document.getElementById("dawn1");
+//let dawn2 = document.getElementById("dawn2");
 
-let guardian1 = document.getElementById("guardian1");
-let guardian2 = document.getElementById("guardian2");
+//let guardian1 = document.getElementById("guardian1");
+//let guardian2 = document.getElementById("guardian2");
 
-let tagTeam1 = document.getElementById("tagTeam1");
-let tagTeam2 = document.getElementById("tagTeam2");
+//let tagTeam1 = document.getElementById("tagTeam1");
+//let tagTeam2 = document.getElementById("tagTeam2");
 
 let currentHP1 = document.getElementById("currentHP1");
 let currentHP2 = document.getElementById("currentHP2");
@@ -2145,10 +2145,10 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     let tempItem;
     let isDouble = (singleDouble.value == "singles" ? false : true);
     //let dusk = (second == false ? dusk1.checked : dusk2.checked);
-    let dawn = (second == false ? dawn1.checked : dawn2.checked);
-    let guardian = (second == false ? guardian2.checked : guardian1.checked);
-    let tagTeam = (second == false ? tagTeam1.checked : tagTeam2.checked);
-    let smacked = (second == false ? smackDown2.checked : smackDown1.checked);
+    //let dawn = (second == false ? dawn1.checked : dawn2.checked);
+   // let guardian = (second == false ? guardian2.checked : guardian1.checked);
+    //let tagTeam = (second == false ? tagTeam1.checked : tagTeam2.checked);
+    //let smacked = (second == false ? smackDown2.checked : smackDown1.checked);
     let possibleDmg = [];
     let possibleFoulDmg;
     let stuffUsed = { ability1: "", ability2: "", item1: "", item2: "", extra1: "", extra2: ""};
@@ -2398,10 +2398,10 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 0.25;
     }
 
-    if (tagTeam && isDouble) {
-        multi *= 1.5;
-        stuffUsed.extra1 += " (Conspire)"
-    }
+    //if (tagTeam && isDouble) {
+       // multi *= 1.5;
+     //   stuffUsed.extra1 += " (Conspire)"
+   // }
 
     tempPower = pokeRound(tempPower * multi);
     multi = 1;
@@ -2422,8 +2422,8 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     }
     if ((ability1 == "Hasty" && move.mr1 == "Melee Attack") ||
        (ability1 == "Vigorous" && stat1 != "healthy" && move.mr1 == "Melee Attack") ||
-       (dawn && isDouble && move.mr1 == "Melee Attack" && ability1 == "Dusk") ||
-       (dawn && isDouble && move.mr1 == "Ranged Attack" && ability1 == "Dawn") ||
+      // (dawn && isDouble && move.mr1 == "Melee Attack" && ability1 == "Dusk") ||
+       //(dawn && isDouble && move.mr1 == "Ranged Attack" && ability1 == "Dawn") ||
        (move.mr1 == "Melee Defense" && ability1 == "Trash Armor")) {
         multi *= 1.5;
         stuffUsed.ability1 = ability1;
@@ -2659,11 +2659,11 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 0.75;
         stuffUsed.ability2 = ability2;
     }
-    if (isDouble && guardian) {
-        multi *= 0.75;
-    }
+   // if (isDouble && guardian) {
+     //   multi *= 0.75;
+    //}
 
-    if (move.grounded && loom2.levitate && !smacked) multi *= 0;
+    //if (move.grounded && loom2.levitate && !smacked) multi *= 0;
 
     stuffUsed.item2 = (itemB == "Health Amulet" ? itemB : stuffUsed.item2);
 
