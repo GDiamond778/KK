@@ -538,13 +538,12 @@
                 <div align="center">
                     <select id="singleDouble" onchange="update()">
                         <option value="singles">Singles</option>
-                        <option value="doubles">Doubles</option>
                     </select>
                 </div>
                 <br>
                 <div align="center">
                     <input type="checkbox" class="hiddenToUser" id="levelCheck" onchange="updateLevel()">
-                    <label class="radiolbl fieldlbl icetrap" for="levelCheck" title="Default to level 100?">Level 100</label>
+                    <label class="radiolbl fieldlbl icetrap" for="levelCheck" title="Current level cap: 10">Level 10</label>
                 </div>
 
                 <hr>
@@ -559,45 +558,7 @@
                             <input type="checkbox" class="hiddenToUser" id="rest2" onchange="update()">
                             <label class="radiolbl fieldlbl rest" for="rest2">Rest</label>
                         </div>
-                    </div>                    
-                    <div>
-                        <div class="left">
-                            <input type="checkbox" class="hiddenToUser" id="iceTrap1" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap btn-left" for="iceTrap1" title="Is this side affected by Icicle Trap">Icicle Trap</label>
-                            <input type="checkbox" class="hiddenToUser" id="halfIce1" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-right" id="halfStyle1" style="width: 3em;" for="halfIce1" title="Are Icicle Traps halved">Halved</label>
-                        </div>
-
-                        <div class="right">
-                            <input type="checkbox" class="hiddenToUser" id="halfIce2" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-left" id="halfStyle2" style="width: 3em;" for="halfIce2" title="Are Icicle Traps halved">Halved</label>
-                            <input type="checkbox" class="hiddenToUser" id="iceTrap2" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap btn-right" for="iceTrap2" title="Is this side affected by Icicle Trap">Icicle Trap</label>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="left">
-                            <input type="radio" class="hiddenToUser" name="barbsL" value="0" id="leftBarb0" checked="checked" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-left" style="width: 1em;" for="leftBarb0">0</label>
-                            <input type="radio" class="hiddenToUser" name="barbsL" value="1" id="leftBarb1" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-mid" style="width: 1em;" for="leftBarb1" title="1 layer of barbs.">1</label>
-                            <input type="radio" class="hiddenToUser" name="barbsL" value="2" id="leftBarb2" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-mid" style="width: 1em;" for="leftBarb2" title="2 layers of barbs.">2</label>
-                            <input type="radio" class="hiddenToUser" name="barbsL" value="3" id="leftBarb3" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-right" style="width: 4em;" for="leftBarb3" title="3 layers of barbs.">3 Barbs</label>
-                        </div>
-
-                        <div class="right">
-                            <input type="radio" class="hiddenToUser" name="barbsR" value="3" id="rightBarb3" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-left" style="width: 4em;" for="rightBarb3" title="3 layers of barbs.">3 Barbs</label>
-                            <input type="radio" class="hiddenToUser" name="barbsR" value="2" id="rightBarb2" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-mid" style="width: 1em;" for="rightBarb2" title="2 layers of barbs.">2</label>
-                            <input type="radio" class="hiddenToUser" name="barbsR" value="1" id="rightBarb1" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-mid" style="width: 1em;" for="rightBarb1" title="1 layer of barbs.">1</label>
-                            <input type="radio" class="hiddenToUser" name="barbsR" value="0" id="rightBarb0" checked="checked" onchange="update()">
-                            <label class="radiolbl fieldlbl btn-right" style="width: 1em;" for="rightBarb0">0</label>
-                        </div>
-                    </div>
+                    </div>         
                     <div>
                         <div class="left">
                             <input type="checkbox" class="hiddenToUser" id="enteredBtl1" onchange="update()">
@@ -619,44 +580,7 @@
                             <input type="checkbox" class="hiddenToUser" id="sapPlant2" onchange="update()">
                             <label class="radiolbl fieldlbl icetrap" for="sapPlant2" title="Is this side affected by Root Grasp">Root Grasp</label>
                         </div>
-                    </div>
-
-                    <div>
-                        <div class="left">
-                            <input type="checkbox" class="hiddenToUser" id="bloodDrain1" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="bloodDrain1" title="Is this side affected by Blood Drain?">Blood Drain</label>
-                        </div>
-
-                        <div class="right">
-                            <input type="checkbox" class="hiddenToUser" id="bloodDrain2" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="bloodDrain2" title="Is this side affected by Blood Drain?">Blood Drain</label>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="left">
-                            <input type="checkbox" class="hiddenToUser" id="pestilence1" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="pestilence1" title="Is this side affected by Pestilence?">Pestilence</label>
-                        </div>
-
-                        <div class="right">
-                            <input type="checkbox" class="hiddenToUser" id="pestilence2" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="pestilence2" title="Is this side affected by Pestilence?">Pestilence</label>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="left">
-                            <input type="checkbox" class="hiddenToUser" id="quicksand1" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="quicksand1" title="Is this side affected by Quicksand?">Quicksand</label>
-                        </div>
-
-                        <div class="right">
-                            <input type="checkbox" class="hiddenToUser" id="quicksand2" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="quicksand2" title="Is this side affected by Quicksand?">Quicksand</label>
-                        </div>
-                    </div>
-
+                    </div>    
                     <div>
                         <div class="left">
                             <input type="checkbox" class="hiddenToUser" id="buzzolen1" onchange="update()">
@@ -668,62 +592,97 @@
                             <label class="radiolbl fieldlbl entered" for="buzzolen2" title="Was this side bitten by Mutle?">Bitten by Mutle</label>
                         </div>
                     </div>
+                    
+                    
+                    <div>
+                        <div class="left">
+                            <input type="checkbox" class="hiddenToUser" id="iceTrap1" onchange="update()">
+                            <label class="radiolbl fieldlbl icetrap btn-left" style="visibility: hidden;" for="iceTrap1" title="Is this side affected by Icicle Trap">Icicle Trap</label>
+                            <input type="checkbox" class="hiddenToUser" id="halfIce1" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-right" id="halfStyle1" style="width: 3em; visibility: hidden;" for="halfIce1" title="Are Icicle Traps halved">Halved</label>
+                        </div>
+
+                        <div class="right">
+                            <input type="checkbox" class="hiddenToUser" id="halfIce2" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-left" id="halfStyle2" style="width: 3em; visibility: hidden;" for="halfIce2" title="Are Icicle Traps halved">Halved</label>
+                            <input type="checkbox" class="hiddenToUser" id="iceTrap2" onchange="update()">
+                            <label class="radiolbl fieldlbl icetrap btn-right" style="visibility: hidden;" for="iceTrap2" title="Is this side affected by Icicle Trap">Icicle Trap</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="left">
+                            <input type="radio" class="hiddenToUser" name="barbsL" value="0" id="leftBarb0" checked="checked" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-left" style="width: 1em; visibility: hidden;" for="leftBarb0">0</label>
+                            <input type="radio" class="hiddenToUser" name="barbsL" value="1" id="leftBarb1" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-mid" style="width: 1em; visibility: hidden;" for="leftBarb1" title="1 layer of barbs.">1</label>
+                            <input type="radio" class="hiddenToUser" name="barbsL" value="2" id="leftBarb2" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-mid" style="width: 1em; visibility: hidden;" for="leftBarb2" title="2 layers of barbs.">2</label>
+                            <input type="radio" class="hiddenToUser" name="barbsL" value="3" id="leftBarb3" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-right" style="width: 4em; visibility: hidden;" for="leftBarb3" title="3 layers of barbs.">3 Barbs</label>
+                        </div>
+
+                        <div class="right">
+                            <input type="radio" class="hiddenToUser" name="barbsR" value="3" id="rightBarb3" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-left" style="width: 4em; visibility: hidden;" for="rightBarb3" title="3 layers of barbs.">3 Barbs</label>
+                            <input type="radio" class="hiddenToUser" name="barbsR" value="2" id="rightBarb2" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-mid" style="width: 1em; visibility: hidden;" for="rightBarb2" title="2 layers of barbs.">2</label>
+                            <input type="radio" class="hiddenToUser" name="barbsR" value="1" id="rightBarb1" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-mid" style="width: 1em; visibility: hidden;" for="rightBarb1" title="1 layer of barbs.">1</label>
+                            <input type="radio" class="hiddenToUser" name="barbsR" value="0" id="rightBarb0" checked="checked" onchange="update()">
+                            <label class="radiolbl fieldlbl btn-right" style="width: 1em; visibility: hidden;" for="rightBarb0">0</label>
+                        </div>
+                    </div>
+                    
+
+                
+
+                    <div>
+                        <div class="left">
+                            <input type="checkbox" class="hiddenToUser" id="pestilence1" onchange="update()">
+                            <label class="radiolbl fieldlbl icetrap" style="visibility: hidden;" for="pestilence1" title="Is this side affected by Pestilence?">Pestilence</label>
+                        </div>
+
+                        <div class="right">
+                            <input type="checkbox" class="hiddenToUser" id="pestilence2" onchange="update()">
+                            <label class="radiolbl fieldlbl icetrap" style="visibility: hidden;" for="pestilence2" title="Is this side affected by Pestilence?">Pestilence</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="left">
+                            <input type="checkbox" class="hiddenToUser" id="quicksand1" onchange="update()">
+                            <label class="radiolbl fieldlbl icetrap" style="visibility: hidden;" for="quicksand1" title="Is this side affected by Quicksand?">Quicksand</label>
+                        </div>
+
+                        <div class="right">
+                            <input type="checkbox" class="hiddenToUser" id="quicksand2" onchange="update()">
+                            <label class="radiolbl fieldlbl icetrap" style="visibility: hidden;" for="quicksand2" title="Is this side affected by Quicksand?">Quicksand</label>
+                        </div>
+                    </div>
+
+                    
 
                     <div>
                         <div class="left">
                             <input type="checkbox" class="hiddenToUser" id="softWater1" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="softWater1" title="Is this side affected by Soft Water?">Soft Water</label>
+                            <label class="radiolbl fieldlbl icetrap" style="visibility: hidden;" for="softWater1" title="Is this side affected by Soft Water?">Soft Water</label>
                         </div>
 
                         <div class="right">
                             <input type="checkbox" class="hiddenToUser" id="softWater2" onchange="update()">
-                            <label class="radiolbl fieldlbl icetrap" for="softWater2" title="Is this side affected by Soft Water?">Soft Water</label>
+                            <label class="radiolbl fieldlbl icetrap" style="visibility: hidden;" for="softWater2" title="Is this side affected by Soft Water?">Soft Water</label>
                         </div>
                     </div>
 
                     <div>
                         <div class="left">
                             <input type="checkbox" class="hiddenToUser" id="smackDown1" onchange="update()">
-                            <label class="radiolbl fieldlbl" style="width: 7em;" for="smackDown1" title="Is this side prevented from levitating?">Smacked Down</label>
+                            <label class="radiolbl fieldlbl" style="width: 7em; visibility: hidden;" for="smackDown1" title="Is this side prevented from levitating?">Smacked Down</label>
                         </div>
 
                         <div class="right">
                             <input type="checkbox" class="hiddenToUser" id="smackDown2" onchange="update()">
-                            <label class="radiolbl fieldlbl" style="width: 7em;" for="smackDown2" title="Is this side prevented from levitating?">Smacked Down</label>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="left">
-                            <input type="checkbox" class="hiddenToUser" id="tagTeam1" onchange="update()">
-                            <label class="radiolbl fieldlbl entered" for="tagTeam1">Team Has Conspire</label>
-                        </div>
-
-                        <div class="right">
-                            <input type="checkbox" class="hiddenToUser" id="tagTeam2" onchange="update()">
-                            <label class="radiolbl fieldlbl entered" for="tagTeam2">Team Has Conspire</label>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="left">
-                            <input type="checkbox" class="hiddenToUser" id="dawn1" onchange="update()">
-                            <label class="radiolbl fieldlbl entered" for="dawn1">Ally Has Dusk/Dawn</label>
-                        </div>
-
-                        <div class="right">
-                            <input type="checkbox" class="hiddenToUser" id="dawn2" onchange="update()">
-                            <label class="radiolbl fieldlbl entered" for="dawn2">Ally Has Dusk/Dawn</label>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="left">
-                            <input type="checkbox" class="hiddenToUser" id="guardian1" onchange="update()">
-                            <label class="radiolbl fieldlbl entered" for="guardian1">Ally Has Guardian</label>
-                        </div>
-
-                        <div class="right">
-                            <input type="checkbox" class="hiddenToUser" id="guardian2" onchange="update()">
-                            <label class="radiolbl fieldlbl entered" for="guardian2">Ally Has Guardian</label>
+                            <label class="radiolbl fieldlbl" style="width: 7em; visibility: hidden;" for="smackDown2" title="Is this side prevented from levitating?">Smacked Down</label>
                         </div>
                     </div>
                 </div>
