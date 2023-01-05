@@ -99,6 +99,26 @@ var loomians = {
         }
     },
 
+    chikitsu: {
+        name: "Chikitsu",
+        number: 15,
+        types: ["Balance"],
+        abilities: ["Scout"],
+        sAbility: ["Wind Walker"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 54,
+            energy: 61,
+            attack: 50,
+            defense: 45,
+            attackR: 50,
+            defenseR: 45,
+            speed: 55
+        }
+    },
+
     cranedge: {
         name: "Cranedge",
         number: 16,

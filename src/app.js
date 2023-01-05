@@ -1124,82 +1124,96 @@ function calculateStat(base, EV, level, isHP = false, posNat, negNat, veryNat, n
         //LL stat = Math.floor(Math.floor(2 * base + Math.floor(EV / 4)) * level / 65 + 80);
     }
     else {
-        stat = Math.ceil(((2 * base) + (10 * EV) + 10) * level / 100 + 5);
-       //LL stat = Math.floor(Math.floor((2 * base + Math.floor(EV / 4)) * level / 100 + 5));
+        //console.log(((2 * base) + (10 * EV) + 10) * level / 100 + 5);
+       
+       
+        //stat = Math.ceil(((2 * base) + (10 * EV) + 10) * level / 100 + 5);
+       
+        stat = ((2 * base) + (10 * EV) + 10) * level / 100 + 5;
+       
+       
+        //LL stat = Math.floor(Math.floor((2 * base + Math.floor(EV / 4)) * level / 100 + 5));
     }
 
     if (posNat == "brawny" && name == "AttackM") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (posNat == "robust" && name == "DefenseM") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (posNat == "smart" && name == "AttackR") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (posNat == "clever" && name == "DefenseR") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (posNat == "nimble" && name == "Speed") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (posNat == "hyper" && name == undefined) {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (posNat == "frail" && name == "AttackM") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (posNat == "tender" && name == "DefenseM") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (posNat == "clumsy" && name == "AttackR") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (posNat == "foolish" && name == "DefenseR") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (posNat == "sluggish" && name == "Speed") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (posNat == "dull" && name == undefined) {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
+    }
+    else if (posNat == "none" && name == undefined) {
+        stat = Math.ceil(stat);
     }
 
+
     if (negNat == "brawny" && name == "AttackM") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (negNat == "robust" && name == "DefenseM") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (negNat == "smart" && name == "AttackR") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (negNat == "clever" && name == "DefenseR") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (negNat == "nimble" && name == "Speed") {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (negNat == "hyper" && name == undefined) {
-        stat = Math.floor(stat * 1.1);
+        stat = Math.ceil(stat * 1.1);
     }
     else if (negNat == "frail" && name == "AttackM") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (negNat == "tender" && name == "DefenseM") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (negNat == "clumsy" && name == "AttackR") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (negNat == "foolish" && name == "DefenseR") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (negNat == "sluggish" && name == "Speed") {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
     }
     else if (negNat == "dull" && name == undefined) {
-        stat = Math.floor(stat * 0.9);
+        stat = Math.ceil(stat * 0.9);
+    }
+    else if (negNat == "none" && name == undefined) {
+        stat = Math.ceil(stat);
     }
 
     if (veryNat == "vBrawny" && name == "AttackM") {
@@ -1897,14 +1911,14 @@ function detailedReport() {
     let possibleDmg = possibleArray[0];
     let foulDamage = possibleArray[1];
     let possibleDmg2 = possibleDmg[0];
-    let possibleDmg3 = possibleDmg[15];
+    let possibleDmg3 = possibleDmg[37];
     if (foulDamage) {
         possibleDmg2 = possibleDmg2 + foulDamage[0];
-        possibleDmg3 = possibleDmg3 + foulDamage[15];
+        possibleDmg3 = possibleDmg3 + foulDamage[37];
     }
     let lowerPercent = (possibleDmg2 / hp * 100).toFixed(1);
     let upperPercent = (possibleDmg3 / hp * 100).toFixed(1);
-    let stuffUsed = possibleDmg[16];
+    let stuffUsed = possibleDmg[38];
     possibleDmg.pop();
     let possibleDmgStr = "Possible Damage Amounts: (" + displayDamage(possibleArray) + ")";
     let critStr = (crit == true ? " Crit " : "");
@@ -2235,8 +2249,9 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
 
     //Base ------------------------------------
 
-    dmg = Math.floor(2 * level / 5) + 2;
-
+   // dmg = Math.floor(2 * level / 5) + 2;
+    dmg = 2 * level / 5 + 2;
+    
     //Power ----------------------------------------
 
     if (typeModAbility1 != undefined && tempType == typeModAbility1.typeModifier.type && typeModAbility1.powerMod == true) {
@@ -2485,13 +2500,14 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     tempDef.def = pokeRound(tempDef.def * multi);
     multi = 1;
 
-    dmg = Math.floor(Math.floor(dmg * tempAtk.atk * tempPower/ tempDef.def ) / 50) + 2;
-
+    //dmg = Math.floor(Math.floor(dmg * tempAtk.atk * tempPower/ tempDef.def ) / 50) + 2;
+    dmg = dmg * tempAtk.atk * tempPower / tempDef.def  / 50 + 2;
     if (isDouble && move.aoe == true) {
         multi *= 0.75;
     }
 
-    dmg = Math.floor(dmg * multi);
+    dmg *= multi;
+    //dmg = Math.floor(dmg * multi);
     multi = 1;
 
     //Crit and Random -----------------------------
@@ -2510,11 +2526,13 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
 
     if (detailed) {
         for (let i = 217; i <= 255; i += 1) {
-            possibleDmg.push(Math.floor(dmg * multi * i/255));
+           // possibleDmg.push(Math.floor(dmg * multi * i/255));
+           possibleDmg.push(dmg * multi * i/255);
         }
     }
-
-    dmg = Math.floor(dmg * multi);
+    //console.log(possibleDmg)
+   // dmg = Math.floor(dmg * multi);
+    dmg *= multi;
     multi = 1;
 
     //STAB ---------------------------------
@@ -2528,7 +2546,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         stuffUsed.ability1 = ability1;
     }
     else if (isStab(types1, { type: tempType })) {
-        multi *= 1.25;
+        multi *= 1.5;
     }
     else if (move.name == "Gloominous Roar" && loom1.name == "Tiklipse" && ability1 != "Circadian") {
         multi *= 1.25;
@@ -2536,11 +2554,14 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
 
     if (detailed) {
         for (let i = 0; i < possibleDmg.length; i++) {
-            possibleDmg[i] = Math.floor(possibleDmg[i] * multi);
+          //  console.log(i, multi);
+         //   possibleDmg[i] = Math.floor(possibleDmg[i] * multi);
+         possibleDmg[i] = possibleDmg[i] * multi;
         }
     }
 
-    dmg = Math.floor(dmg * multi);
+  //  dmg = Math.floor(dmg * multi);
+    dmg *= multi;
     multi = 1;
 
     //Type -------------------------------
@@ -2583,7 +2604,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     if (move.typeModifier != undefined && (types2.primary == move.typeModifier.type || types2.secondary == move.typeModifier.type)) {
         multi *= move.typeModifier.modifier;
     }
-
+   // console.log(multi);
     if (move.name == "Gloominous Roar" && loom1.name == "Tiklipse" && ability1 != "Circadian") {
         multi = 1;
         if (types2.primary == "Ancient" || types2.secondary == "Ancient") {
@@ -2599,14 +2620,16 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
             multi = 0;
         }
     }
+   // console.log(multi);
     if (ability2 == "Gummy" && move.bomb) {
         multi *= 0;
         stuffUsed.ability2 = ability2;
     }
+   // console.log(multi);
     if (loom2.name == "Heavy Bag" && tempType == "Mind") {
         multi *= 0.5;
     }
-
+    
     effectiveness = multi;
 
     if (ability1 == "Wise" && effectiveness < 1) {
@@ -2616,11 +2639,15 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
 
     if (detailed) {
         for (let i = 0; i < possibleDmg.length; i++) {
-            possibleDmg[i] = Math.floor(possibleDmg[i] * multi);
+          // console.log(i, multi);
+           // possibleDmg[i] = Math.floor(possibleDmg[i] * multi);
+           possibleDmg[i] = possibleDmg[i] * multi;
         }
     }
-
-    dmg = Math.floor(dmg * multi);
+   
+  //  console.log(multi);
+    //dmg = Math.floor(dmg * multi);
+    dmg *= multi;
     multi = 1;
 
     //Status ------------------------
@@ -2634,11 +2661,13 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     }
     if (detailed) {
         for (let i = 0; i < possibleDmg.length; i++) {
-            possibleDmg[i] = Math.floor(possibleDmg[i] * multi);
+           // possibleDmg[i] = Math.floor(possibleDmg[i] * multi);
+           possibleDmg[i] = possibleDmg[i] * multi;
         }
     }
 
-    dmg = Math.floor(dmg * multi);
+   // dmg = Math.floor(dmg * multi);
+    dmg *= multi;
     multi = 1;
 
     //Other --------------------------------
@@ -2677,19 +2706,20 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         }
         stuffUsed.ability1 = ability1;
     }
-
+    console.log(possibleDmg);
     if (detailed) {
         for (let i = 0; i < possibleDmg.length; i++) {
-            possibleDmg[i] = Math.floor(possibleDmg[i] * multi);
+       
+          possibleDmg[i] = Math.ceil(possibleDmg[i] * multi);
+          
         }
         if (foulHit) {
             return [dmg, possibleDmg];
         }
-        possibleDmg[16] = stuffUsed;
+        possibleDmg[38] = stuffUsed;
         return [possibleDmg, possibleFoulDmg];
     }
-
-    dmg = Math.floor(dmg * multi);
+    dmg = Math.ceil(dmg * multi);
 
     return dmg + foulDmg;
 }
