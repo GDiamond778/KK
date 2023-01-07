@@ -814,6 +814,7 @@ function makeBlankSet(loomian) {
         veryNature: "none",
         ability: "None",
         item: "None",
+        relic: "None",
         level: 50
     }
     return set;
