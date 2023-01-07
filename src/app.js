@@ -181,6 +181,9 @@ let gender2 = document.getElementById("gender2");
 let item1 = document.getElementById("item1");
 let item2 = document.getElementById("item2");
 
+let relic1 = document.getElementById("relic1");
+let relic2 = document.getElementById("relic2");
+
 let sapPlant1 = document.getElementById("sapPlant1");
 let sapPlant2 = document.getElementById("sapPlant2");
 
@@ -442,6 +445,7 @@ function loadDropdowns() {
 
     abilities.sort();
     items.sort();
+    relics.sort();
 
     for (let loom in loomians) {
         let optG1 = document.createElement("optgroup");
@@ -478,6 +482,11 @@ function loadDropdowns() {
     for (let item in items) {
         item1.options[item1.options.length] = new Option(items[item]);
         item2.options[item2.options.length] = new Option(items[item]);
+    }
+
+    for (let relic in relics) {
+        relic1.options[relic1.options.length] = new Option(relics[relic]);
+        relic2.options[relic2.options.length] = new Option(relics[relic]);
     }
 
     moveNames.sort();

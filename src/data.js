@@ -1013,6 +1013,8 @@ var typeModAbilities = {
          //    "Volcanic Ash", "Rageful Plushie", "Clutch Plushie", "Specialty Boots", "Milkshake", "Kabunga Coffee"];
 
 var items = ["Testing Item"]
+
+var relics = ["Trap Relic", "Remover Relic", "Pivot Relic"]
 //for (let ty in types) {
  //   items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Essence");
   //  items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Pearl");
