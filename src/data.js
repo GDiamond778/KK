@@ -258,66 +258,6 @@ var loomians = {
             speed: 14
         }
     },
-    
-    'shurlow-day': {
-        name: "Shurlow-Day",
-        number: 53,
-        types: ["Wood"],
-        abilities: ["Glow Sap"],
-        sAbility: ["Chlorophyll"],
-        finalEvo: false,
-        weight: 00,
-        height: 00,
-        baseStats: {
-            hp: 66,
-            energy: 77,
-            attack: 25,
-            defense: 59,
-            attackR: 68,
-            defenseR: 61,
-            speed: 57
-        }
-    },
-
-    'shurlow-night': {
-        name: "Shurlow-Night",
-        number: 53,
-        types: ["Wood"],
-        abilities: ["Glow Sap"],
-        sAbility: ["Botanist"],
-        finalEvo: true,
-        weight: 00,
-        height: 00,
-        baseStats: {
-            hp: 66,
-            energy: 77,
-            attack: 37,
-            defense: 79,
-            attackR: 50,
-            defenseR: 80,
-            speed: 24
-        }
-    },
-
-    flowum: {
-        name: "Flowum",
-        number: 54,
-        types: ["Wood", "Light"],
-        abilities: ["Glow Sap"],
-        sAbility: ["Chlorophyll"],
-        finalEvo: true,
-        weight: 00,
-        height: 00,
-        baseStats: {
-            hp: 68,
-            energy: 75,
-            attack: 55,
-            defense: 70,
-            attackR: 112,
-            defenseR: 80,
-            speed: 80
-        }
-    },
 
     kraboo: {
         name: "Kraboo",
