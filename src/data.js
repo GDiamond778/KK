@@ -954,7 +954,7 @@ var typeModAbilities = {
 
 var items = ["Testing Item"]
 
-var relics = ["Trap Relic", "Remover Relic", "Pivot Relic"]
+var relics = ["nice try"]
 //for (let ty in types) {
  //   items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Essence");
   //  items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Pearl");
