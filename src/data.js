@@ -38,6 +38,46 @@ var loomians = {
             speed: 44
         }
     },
+
+    conix: {
+        name: "Conix",
+        number: 02,
+        types: ["Fire"],
+        abilities: ["Rise"],
+        sAbility: ["Avian"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 32,
+            energy: 68,
+            attack: 30,
+            defense: 45,
+            attackR: 80,
+            defenseR: 35,
+            speed: 60
+        }
+    },
+
+    snartle: {
+        name: "Snartle",
+        number: 03,
+        types: ["Water"],
+        abilities: ["Snaked"],
+        sAbility: ["Armor Swap"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 41,
+            energy: 60,
+            attack: 55,
+            defense: 80,
+            attackR: 59,
+            defenseR: 30,
+            speed: 25
+        }
+    },
     
     dragnir: {
         name: "Dragnir",
@@ -58,30 +98,10 @@ var loomians = {
             speed: 40
         }
     },
- 
-    snartle: {
-        name: "Snartle",
-        number: 07,
-        types: ["Water"],
-        abilities: ["Snaked"],
-        sAbility: ["Armor Swap"],
-        finalEvo: false,
-        weight: 00,
-        height: 00,
-        baseStats: {
-            hp: 41,
-            energy: 60,
-            attack: 55,
-            defense: 80,
-            attackR: 59,
-            defenseR: 30,
-            speed: 25
-        }
-    },
     
     steeline: {
         name: "Steeline",
-        number: 10,
+        number: 05,
         types: ["Metal"],
         abilities: ["Stormbreaker"],
         sAbility: ["Determination"],
@@ -98,6 +118,8 @@ var loomians = {
             speed: 80
         }
     },
+
+    
     
     cranedge: {
         name: "Cranedge",
@@ -1392,15 +1414,16 @@ var typeModAbilities = {
 //var items = ["Heavy Shield", "Heavy Armor", "Power Cuffs", "Health Amulet", "Drain Orb", "Mystic Wand", "Drop of Youth", "Energy Orb", "Chocolate Bar", "Mysterious Dust", "Heavy Shackles", "Thunder Orb",
          //    "Volcanic Ash", "Rageful Plushie", "Clutch Plushie", "Specialty Boots", "Milkshake", "Kabunga Coffee"];
 
-var items = ["Testing Item"]
+var items = ["Joy Mirror", "Mad Mirror", "Sad Mirror", "Hero's Bow", "Hero's Sword", "Sap Seed", "Sharp Claws"]
 
 var relics = ["Cure Relic", "Rebound Relic", "Heal Relic"]
-//for (let ty in types) {
- //   items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Essence");
-  //  items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Pearl");
-  //  items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Shell");
-//}
+for (let ty in types) {
+    items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Bracelet");
+    items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Pendant");
+    //items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Pearl");
+//  items.push(types[ty].otherName.charAt(0).toUpperCase() + types[ty].otherName.slice(1) + " Shell");
+}
 
 var sets = [];
 
-var changelog = "bug fixes.";
+var changelog = "update 1 stuff, moves need to be added and items need functionality";
