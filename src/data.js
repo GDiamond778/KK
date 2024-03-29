@@ -235,7 +235,7 @@ var loomians = {
             energy: 62,
             attack: 54,
             defense: 58,
-            attackR: 43,
+            attackR: 41,
             defenseR: 41,
             speed: 51
         }
@@ -320,6 +320,26 @@ var loomians = {
             speed: 59
         }
     },
+
+    mutle: {
+        name: "Mutle",
+        number: 24,
+        types: ["Earth", "Insect"],
+        abilities: ["Armored"],
+        sAbility: ["Determination"],
+        finalEvo: false,
+        weight: 00,
+        height: 00,
+        baseStats: {
+            hp: 75,
+            energy: 67,
+            attack: 75,
+            defense: 80,
+            attackR: 44,
+            defenseR: 40,
+            speed: 39
+        }
+    },  
 
     manfu: {
         name: "Manfu",
@@ -417,7 +437,7 @@ var loomians = {
             defense: 70,
             attackR: 80,
             defenseR: 70,
-            speed: 90
+            speed: 80
         }
     },
 
@@ -452,12 +472,12 @@ var loomians = {
         height: 00,
         baseStats: {
             hp: 110,
-            energy: 70,
+            energy: 80,
             attack: 60,
             defense: 90,
             attackR: 80,
             defenseR: 100,
-            speed: 50
+            speed: 70
         }
     },
 
@@ -631,13 +651,13 @@ var loomians = {
         weight: 00,
         height: 00,
         baseStats: {
-            hp: 70,
-            energy: 68,
-            attack: 40,
-            defense: 65,
-            attackR: 45,
-            defenseR: 32,
-            speed: 30
+            hp: 39,
+            energy: 63,
+            attack: 75,
+            defense: 51,
+            attackR: 36,
+            defenseR: 46,
+            speed: 70
         }
     },
 
@@ -744,7 +764,7 @@ var loomians = {
     morphu: {
         name: "Morphu",
         number: 99,
-        types: ["Ice", "Spirit"],
+        types: ["Sound", "Spirit"],
         abilities: [""],
         sAbility: [""],
         finalEvo: true,
