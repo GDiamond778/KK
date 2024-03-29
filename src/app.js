@@ -1156,7 +1156,7 @@ function calculateStat(base, EV, level, isHP = false, posNat, negNat, veryNat, n
 
     level = parseInt(level);
     if (isHP) {
-        return Math.ceil(0.8*(((2 * base) + (20 * EV) + 10) * level / 70 + 5) * 1.5);
+        return Math.ceil(0.8*(((2 * base) + (20 * EV) + 10) * level / 60 + 5) * 1.45);
        //LL return Math.floor((2 * base + Math.floor(EV / 4)) * level / 100) + level + 10;
     }
 

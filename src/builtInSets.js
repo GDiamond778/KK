@@ -44,7 +44,7 @@ var builtInSets = [
 	    },
 	    posNature: "robust",
 	    negNature: "none",
-	    ability: "None",
+	    ability: "Exoskeleton",
 	    item: "Sap Seed",
 	    level: 50
 	},
