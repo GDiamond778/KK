@@ -1156,13 +1156,13 @@ function calculateStat(base, EV, level, isHP = false, posNat, negNat, veryNat, n
 
     level = parseInt(level);
     if (isHP) {
-        return Math.ceil((((2 * base) + (20 * EV) + 10) * level / 40 + 5) * 1.5);
+        return Math.ceil(0.8*(((2 * base) + (20 * EV) + 10) * level / 40 + 5) * 1.5);
        //LL return Math.floor((2 * base + Math.floor(EV / 4)) * level / 100) + level + 10;
     }
 
     if (isEnergy) {
        //2x HP =  stat =  Math.ceil((((2 * base) + (20 * EV) + 10) * level / 40 + 5) * 1.5) * 2;
-       stat = Math.ceil((((2 * base) + (20 * EV) + 10) * level / 40 + 5) * 2);
+       stat = Math.ceil(0.6*(((2 * base) + (20 * EV) + 10) * level / 40 + 5) * 2);
         //LL stat = Math.floor(Math.floor(2 * base + Math.floor(EV / 4)) * level / 65 + 80);
         //CMHERE
     }
