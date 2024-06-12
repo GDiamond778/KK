@@ -460,7 +460,7 @@ function loadDropdowns() {
     items.sort();
     relics.sort();
   
-    console.log(loomians);
+    //console.log(loomians);
     for (let loom in loomians) {
         let optG1 = document.createElement("optgroup");
         optG1.label = loomians[loom].name;
@@ -497,8 +497,8 @@ function loadDropdowns() {
         item1.options[item1.options.length] = new Option(items[item]);
         item2.options[item2.options.length] = new Option(items[item]);
     }
-    console.log(items);
-    console.log("hi");
+    //console.log(items);
+    //console.log("hi");
     for (let relic in relics) {
         relic1.options[relic1.options.length] = new Option(relics[relic]);
         relic2.options[relic2.options.length] = new Option(relics[relic]);
@@ -1058,7 +1058,7 @@ function loadMoves(updatePower = false) {
     map.set("moveThree2", [moveThree2, moveThreeLbl2, moveThreeDropdown2]);
     map.set("moveFour1", [moveFour1, moveFourLbl1, moveFourDropdown1]);
     map.set("moveFour2", [moveFour2, moveFourLbl2, moveFourDropdown2]);
-    console.log(manaList);
+    //console.log(manaList);
     for (manaCheck in manaList) {
         if (manaList[manaCheck]) {
             //console.log("HERE", map.get(manaCheck)[0].power );
@@ -1643,13 +1643,13 @@ function calculateDamage(moveOne1, moveTwo1, moveThree1, moveFour1, moveOne2, mo
     let dmgMoveOneU1 = getMultiplier(firstLoom, secondLoom, moveOne1, moveOnePower1.value, critOne1, level1.value, ...[,,,,,,], mana= manaOne1);
     let dmgMoveOneL1 = getMultiplier(firstLoom, secondLoom, moveOne1, moveOnePower1.value, critOne1, level1.value, true, ...[,,,,,], mana=manaOne1);
     let dmgMoveOnePercent1 = (dmgMoveOneL1 / hp2 * 100).toFixed(1).toString() + " - " + (dmgMoveOneU1 / hp2 * 100).toFixed(1).toString() + "%";
-
+    console.log("MOVE1", moveOnePower1.value);
     moveOneDmg1.innerHTML = dmgMoveOnePercent1 + checkIceTrap(moveOne1, Math.min(dmgMoveOneL1, hp2), Math.min(dmgMoveOneU1, hp2), hp1, energy1, itemA, ability1, ability2);
 
     let dmgMoveTwoU1 = getMultiplier(firstLoom, secondLoom, moveTwo1, moveTwoPower1.value, critTwo1, level1.value, ...[,,,,,,], mana=manaTwo1 );
     let dmgMoveTwoL1 = getMultiplier(firstLoom, secondLoom, moveTwo1, moveTwoPower1.value, critTwo1, level1.value, true, ...[,,,,,], mana=manaTwo1);
     let dmgMoveTwoPercent1 = (dmgMoveTwoL1 / hp2 * 100).toFixed(1).toString() + " - " + (dmgMoveTwoU1 / hp2 * 100).toFixed(1).toString() + "%";
-
+    console.log("MOVE2", moveTwoPower1.value);
     moveTwoDmg1.innerHTML = dmgMoveTwoPercent1 + checkIceTrap(moveTwo1, Math.min(dmgMoveTwoL1, hp2), Math.min(dmgMoveTwoU1, hp2), hp1, energy1, itemA, ability1, ability2, ability2);
 
     let dmgMoveThreeU1 = getMultiplier(firstLoom, secondLoom, moveThree1, moveThreePower1.value, critThree1, level1.value, ...[,,,,,,], mana=manaThree1);
@@ -2054,7 +2054,7 @@ function detailedReport() {
         document.getElementById("possibleDmg").innerHTML = "Possible Damage Amounts: (0)";
         return;
     }
-
+    console.log("ARRAY", movePower);
     let possibleArray = getMultiplier(firstLoom, secondLoom, move, movePower, crit, level, undefined, second, true, ...[,,,], mana);
     let possibleDmg = possibleArray[0];
     let foulDamage = possibleArray[1];
@@ -2266,9 +2266,10 @@ function isStab(userTypes, move) {
 }
 
 function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, second = false, detailed = false, withoutSlapDown = true, takeSecondaryType = false, foulHit = false, mana = false) {
+   //console.log(move, movePower)
     if (move.power == 0 && detailed) return [0];
     if (move.power == 0) return 0;
-    console.log("FUNC", mana);
+    //console.log("FUNC", mana);
     let bothTypes = getTypes(second);
     let types1 = bothTypes.firstLoom;
     let types2 = bothTypes.secondLoom;
@@ -2535,13 +2536,13 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 1.5;
         stuffUsed.ability1 = ability1;
     }
-    console.log("tempPower", mana);
+    //console.log("tempPower", mana);
     if (mana) {
-        console.log(tempPower);
+        //console.log(tempPower);
         //zmove formula
         tempPower <= 55 ? tempPower = 100 : tempPower <= 65 ? tempPower = 120 : tempPower <= 75 ? tempPower = 140 : tempPower <=85 ? tempPower = 160 : tempPower <= 95 ? tempPower = 175 : tempPower <= 100 ? tempPower = 180 : tempPower <= 110 ? tempPower = 185 : tempPower <= 125 ? tempPower = 190 : tempPower <= 130 ? tempPower = 195 : tempPower = 200;
-        console.log(tempPower);
-        console.log("TRUE");
+       // console.log(tempPower);
+       // console.log("TRUE");
     }
 
     if ((ability1 == "Bloodsucker" && move.drain) ||
@@ -2656,6 +2657,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
    // }
 
     tempPower = pokeRound(tempPower * multi);
+   // console.log(tempPower);
     multi = 1;
 
     //Attack -------------------------------------------
@@ -2709,7 +2711,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
 
     tempAtk.atk = pokeRound(tempAtk.atk * multi);
     multi = 1;
-    console.log(possibleDmg);
+    //console.log(possibleDmg);
     //Defense ----------------------------------------------------
 
     if (crit && tempDef.stage > 0) {
@@ -2755,6 +2757,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     multi = 1;
 
     //dmg = Math.floor(Math.floor(dmg * tempAtk.atk * tempPower/ tempDef.def ) / 50) + 2;
+    console.log(tempAtk.atk);
     dmg = dmg * tempAtk.atk * tempPower / tempDef.def  / (level/50*1.5 + 30) + 2;
     if (isDouble && move.aoe == true) {
         multi *= 0.75;
@@ -2784,7 +2787,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
            possibleDmg.push(dmg * multi * i/255);
         }
     }
-    console.log(possibleDmg)
+   // console.log(possibleDmg)
    // dmg = Math.floor(dmg * multi);
     dmg *= multi;
     multi = 1;
@@ -2978,7 +2981,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     }
    // console.log(possibleDmg); VISIT HERE
    if (itemA == "Muscle Mochi" && withoutSlapDown && dmg < Math.floor(parseInt(stats2.totalHP) * 1/4)){
-    console.log("ya");   
+    //console.log("ya");   
     ability1 == "Jelly Enhancer" ? multi *= 3 : multi *= 2;
         
     }
