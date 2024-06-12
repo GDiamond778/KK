@@ -801,6 +801,17 @@ var moves = {
         contact: true
     },
 
+    harmfulHum: {
+        name: "Harmful Hum",
+        power: 60,
+        energy: 75,
+        accuracy: 100,
+        type: "Sound",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
     tailSlash: {
         name: "Tail Slash",
         power: 65,
@@ -1023,6 +1034,208 @@ var moves = {
         mr2: "Ranged Defense",
     },
 
+    //ManaMoves
+
+    groveGuillotine: {
+        name: "Grove Guillotine",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Wood",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    mudslideMayhem: {
+        name: "Mudslide Mayhem",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Earth",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    tidalTantrum: {
+        name: "Tidal Tantrum",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Water",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    heatwaveHavoc: {
+        name: "Heatwave Havoc",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Fire",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    alloyAnnihilate: {
+        name: "Alloy Annihilate",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Metal",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    whirlwindWhiplash: {
+        name: "Whirlwind Whiplash",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Wind",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    corrosiveCascade: {
+        name: "Corrosive Cascade",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Poison",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    icicleImpact: {
+        name: "Icicle Impact",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Ice",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    joltJavelin: {
+        name: "Jolt Javelin",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Lightning",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    fierceFisticuffs: {
+        name: "Fierce Firsticuffs",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Force",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    obsidianOnslaught: {
+        name: "Obsidian Onslaught",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Dark",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    luminousLance: {
+        name: "Luminous Lance",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Light",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    phantomFury: {
+        name: "Phantom Fury",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Spirit",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    cometCrush: {
+        name: "Comet Crush",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Cosmic",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    peacefulPulse: {
+        name: "Peaceful Pulse",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Balance",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    mandibleMaul: {
+        name: "Mandible Maul",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Insect",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    arcaneAssault: {
+        name: "Arcane Assault",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Mystic",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+    piercingPitch: {
+        name: "Piercing Pitch",
+        power: 1,
+        energy: 1,
+        accuracy: 100,
+        type: "Sound",
+        mr: "Ranged",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+    },
+
+
+
     //Support Moves -----------------------------------------------------------------------------------------------------------------------------------------
 
     noMove: {
@@ -1133,6 +1346,8 @@ var moves = {
         mr: "Support"
     },
 
+
+    
     leafShroud: {
         name: "Leaf Shroud",
         power: 0,
@@ -1436,7 +1651,9 @@ var typeModAbilities = {
 
 var items = ["Joy Mirror", "Mad Mirror", "Sad Mirror", "Hero's Bow", "Hero's Sword", "Sap Seed", "Sharp Claws"]
 
-var relics = ["Cure Relic", "Rebound Relic", "Heal Relic"]
+var manaMoves = {"Wood": "Grove Guillotine", "Earth": "Mudslide Mayhem", "Water": "Tidal Tantrum", "Fire": "Heatwave Havoc", "Metal": "Alloy Annihilate", "Wind": "Whirlwind Whiplash", "Poison": "Corrosive Cascade", "Ice": "Icicle Impact", "Lightning": "Jolt Javelin", "Force": "Fierce Fisticuffs", "Dark": "Obsidian Onslaught", "Light": "Luminous Lance", "Spirit": "Phantom Fury", "Cosmic": "Comet Crush", "Balance": "Peaceful Pulse", "Insect": "Mandible Maul", "Mystic": "Arcane Assault", "Sound": "Piercing Pitch" }
+
+var relics = ["Cure Relic", "Rebound Relic", "Heal Relic", "Pip Relic"]
 for (let ty in types) {
     items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Bracelet");
     items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Pendant");

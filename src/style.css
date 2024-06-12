@@ -171,11 +171,21 @@ hr {
 
 .critlbl {
   font-size: 0.8em;
-  width: 2.5em;
+  width: 1.5em;
   height: 1em;
-  padding: 3px 3px;
+  padding: 2px 2px;
   margin: 0px 1px;
 }
+
+.manalbl {
+  font-size: 0.8em;
+  width: 1em;
+  height: 1em;
+  padding: 2px 2px;
+  margin: 0px 1px;
+}
+
+
 
 .fieldlbl {
   font-size: 0.8em;
