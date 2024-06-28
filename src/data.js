@@ -2225,19 +2225,38 @@ var types = {
     },
 };
 
-var abilities = ["Accelerate", "Alleviate", "Armor Down", "Armor Swap", "Armored Spine","Ashes to Embers", "Balanced", "Botanist", "Clamp", "Dampen", "Determination", "Dizzy", "Exoskeleton", "Glow Sap", "Greedy", "Hoarder", "Insectify", "Light Show", "Puff Up", "Reflector", "Rise", "Sapper", "Scout", "Snaked", "Static", "Stormbreaker", "Surprise"];
+var abilities = ["Accelerate", "Alleviate", "Armor Down", "Armor Swap", "Armored Spine","Ashes to Embers", "Balanced", "Bleed", "Bluff", "Botanist", "Camouflage", "Charged", "Chilling Presence", "Clamp", "Cleansing Waters", "Camatose", "Companion Cadence", "Contaminate", "Cryomancer", "Current Catcher", "Cursed Body", "Dampen", "Dangerous Diet", "Dazzling Aurora", "Determination", "Disruptive Noise", "Draining Bite", "Drenched", "Dubious DNA", "Dizzy", "Echo Location", "Egoist", "Exoskeleton", "Feather Guard", "Fists of Fury", "Fortified Shell", "Fresh Fragrance", "Frightening", "Full Arsenal", "Glider",  "Glow Sap", "Gold Digger", "Guerilla Tactics", "Greedy", "Hand Cannon", "High Density", "Hoarder", "Hooked", "Hover", "Hydration", "Hydro Powered", "Insectify", "Light Show", "Puff Up", "Reflector", "Rise", "Sapper", "Scout", "Snaked", "Static", "Stormbreaker", "Surprise"];
 
 var typeModAbilities = {
-    avian: {
-      name: "Avian",
+    hover: {
+      name: "Hover",
       typeModifier: { type: "Earth", modifier: 0 },
       powerMod: false
         
     },
+
+    glider: {
+        name: "Glider",
+        typeModifier: { type: "Wind", modifier: 0 },
+        powerMod: false
+          
+      },
     
     coursingVenom: {
         name: "Coursing Venom",
         typeModifier: { type: "Toxic", modifier: 0 },
+        powerMod: false
+    },
+
+    echoLocation: {
+        name: "Echo Location",
+        typeModifier: { type: "Dark", modifier: 0 },
+        powerMod: false
+    },
+
+    dangerousDiet: {
+        name: "Dangerous Diet",
+        typeModifier: { type: "Poison", modifier: 0 },
         powerMod: false
     },
     
@@ -2292,6 +2311,18 @@ var typeModAbilities = {
     combustible: {
         name: "Combustible",
         typeModifier: { type: "Fire", modifier: 0 },
+        powerMod: false
+    },
+
+    blazeheart: {
+        name: "Blazeheart",
+        typeModifier: { type: "Fire", modifier: 1 },
+        powerMod: false
+    },
+
+    hydroPowered: {
+        name: "Hydro Powered",
+        typeModifier: { type: "Water", modifier: 1 },
         powerMod: false
     },
     

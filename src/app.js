@@ -567,7 +567,7 @@ function update(updatePower = false, updateBaseStats = false) {
     }
     halfIce2.onclick = function() {changeButton(halfIce2)};
 
-    if (abilityDropdown1.value == "Combustible" || abilityDropdown1.value == "Noxious Weeds" || abilityDropdown1.value == "Coursing Venom" || abilityDropdown1.value == "Prismatic"|| abilityDropdown1.value == "Rise" || abilityDropdown1.value == "Light Show" || abilityDropdown1.value == "Toxic Filter") {
+    if (abilityDropdown1.value == "Combustible" || abilityDropdown1.value == "Blazeheart" || abilityDropdown1.value == "Hydro Powered" || abilityDropdown1.value == "Noxious Weeds" || abilityDropdown1.value == "Coursing Venom" || abilityDropdown1.value == "Prismatic"|| abilityDropdown1.value == "Rise" || abilityDropdown1.value == "Light Show" || abilityDropdown1.value == "Toxic Filter") {
         immuneAbilityBoost1.style.visibility = "visible";
     }
     else {
@@ -575,7 +575,7 @@ function update(updatePower = false, updateBaseStats = false) {
         immuneAbilityBoost1.checked = false;
     }
 
-    if (abilityDropdown2.value == "Combustible" || abilityDropdown2.value == "Noxious Weeds" || abilityDropdown2.value == "Coursing Venom" || abilityDropdown2.value == "Prismatic" || abilityDropdown2.value == "Rise" || abilityDropdown1.value == "Light Show" || abilityDropdown2.value == "Toxic Filter") {
+    if (abilityDropdown2.value == "Combustible" || abilityDropdown2.value == "Blazeheart" || abilityDropdown1.value == "Hydro Powered" || abilityDropdown2.value == "Noxious Weeds" || abilityDropdown2.value == "Coursing Venom" || abilityDropdown2.value == "Prismatic" || abilityDropdown2.value == "Rise" || abilityDropdown1.value == "Light Show" || abilityDropdown2.value == "Toxic Filter") {
         immuneAbilityBoost2.style.visibility = "visible";
     }
     else {
@@ -1157,7 +1157,7 @@ function loadStats() {
     statAtk1.innerHTML = Math.floor(atk1 * multi);
     multi = 1;
     if (ability1 == "Trash Armor" || ability1 == "Hard Candy") multi *= 1.5;
-    if (ability1 == "Exoskeleton") multi *= 1.3;
+    if (ability1 == "Exoskeleton") multi *= 1.25;
     if (firstItem == "Drop of Youth" && firstLoom.finalEvo == false) multi *= 1.5;
     if (firstItem == "Golden Lock" && firstLoom.finalEvo == false )  multi *= 1.5;
     if (firstItem == "Heavy Armor") multi *= 1.2;
@@ -1187,7 +1187,7 @@ function loadStats() {
     multi = 1;
     if (ability2 == "Trash Armor" || ability2 == "Hard Candy" || (secondItem == "Drop of Youth" && secondLoom.finalEvo == false)) multi *= 1.5;
     if (ability2 == "Trash Armor" || ability2 == "Hard Candy" || (secondItem == "Golden Lock" && secondLoom.finalEvo == false)) multi *= 1.5;
-    if (ability2 == "Exoskeleton") multi *= 1.3;
+    if (ability2 == "Exoskeleton") multi *= 1.25;
     if (secondItem == "Heavy Armor" ) multi *= 1.2;
     if (secondItem == "Metal Coat" ) multi *= 1.5;
     statDef2.innerHTML = Math.floor(def2 * multi);
@@ -2484,6 +2484,21 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 1.25;
         stuffUsed.ability1 = ability1;
     }
+    else if (ability1 == "Drenched" && tempType == "Balance") {
+        tempType = "Water";
+        multi *= 1.25;
+        stuffUsed.ability1 = ability1;
+    }
+    else if (ability1 == "Contaminate" && tempType == "Balance") {
+        tempType = "Poison";
+        multi *= 1.25;
+        stuffUsed.ability1 = ability1;
+    }
+    else if (ability1 == "Cryomancer" && tempType == "Balance") {
+        tempType = "Ice";
+        multi *= 1.25;
+        stuffUsed.ability1 = ability1;
+    }
     else if (ability1 == "Star Struck" && tempType == "Balance") {
         tempType = "Cosmic";
         multi *= 1.25;
@@ -2495,7 +2510,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         stuffUsed.ability1 = ability1;
     }
 
-    if ((ability1 == "Combustible" || ability1 == "Coursing Venom" || ability1 == "Noxious Weeds" || ability1 == "Prismatic" || ability1 == "Light Show") && immuneBoostCheck1) {
+    if ((ability1 == "Combustible" || ability1 == "Blazeheart" || ability1 == "Hydro Powered" || ability1 == "Coursing Venom" || ability1 == "Noxious Weeds" || ability1 == "Prismatic" || ability1 == "Light Show") && immuneBoostCheck1) {
         if (tempType == typeModAbility1.typeModifier.type) {
             multi *= 1.5;
             stuffUsed.ability1 = ability1;
@@ -2683,6 +2698,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
     if ((ability1 == "Hasty" && move.mr1 == "Melee Attack") ||
        (ability1 == "Vigorous" && stat1 != "healthy" && move.mr1 == "Melee Attack") ||
        (ability1 == "Bluff" && stat1 != "healthy" && move.mr1 == "Melee Attack") ||
+       (ability1 == "Bluff" && stat1 != "healthy" && move.mr1 == "Melee Attack") ||
       // (dawn && isDouble && move.mr1 == "Melee Attack" && ability1 == "Dusk") ||
        //(dawn && isDouble && move.mr1 == "Ranged Attack" && ability1 == "Dawn") ||
        (move.mr1 == "Melee Defense" && ability1 == "Trash Armor")) {
@@ -2690,7 +2706,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         stuffUsed.ability1 = ability1;
     }   
     if (move.mr1 == "Melee Defense" && ability1 == "Exoskeleton") {
-         multi *= 1.3;
+         multi *= 1.25;
          stuffUsed.ability1 = ability1;
     }
     if ((move.mr1 == "Melee Defense" && itemA == "Heavy Armor") ||
@@ -2750,7 +2766,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         stuffUsed.ability2 = ability2;
     }
     if (move.mr2 == "Melee Defense" && ability2 == "Exoskeleton") {
-         multi *= 1.3;
+         multi *= 1.25;
          stuffUsed.ability2 = ability2;
     }
     if (ability2 == "Slick Shell" && (move.mr2 == "Ranged Defense" || adaptive.mr2 == "Ranged Defense")) {
@@ -2915,11 +2931,11 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
 
     //Status ------------------------
 
-    if (stat1 == "burned" && move.mr == "Melee" && move.name != "Ill Will" && ability1 != "Vigorous" && ability1 != "Bluff" && ability1 != "Aqua Body" && types1.primary != "Fire" && types1.secondary != "Fire") {
+    if (stat1 == "burned" && move.mr == "Melee" && move.name != "Ill Will" && ability1 != "Vigorous" && ability1 != "Bluff" && ability1 != "Bluff" && ability1 != "Aqua Body" && types1.primary != "Fire" && types1.secondary != "Fire") {
         multi *= 0.5;
     }
 
-    if (stat1 == "frostbitten" && move.mr == "Ranged" && move.name != "Ill Will" && ability1 != "Vigorous" && ability1 != "Aqua Body" && types1.primary != "Ice" && types1.secondary != "Ice") {
+    if (stat1 == "frostbitten" && move.mr == "Ranged" && move.name != "Ill Will" && ability1 != "Vigorous" && ability1 != "Bluff" && ability1 != "Aqua Body" && types1.primary != "Ice" && types1.secondary != "Ice") {
         multi *= 0.5;
     }
     if (detailed) {
@@ -2952,6 +2968,10 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         stuffUsed.item2 = itemB;
     }
     if (effectiveness > 1 && ability2 == "Enchanted Coat") {
+        multi *= 0.75;
+        stuffUsed.ability2 = ability2;
+    }
+    if ( ability2 == "Best Buds") {
         multi *= 0.75;
         stuffUsed.ability2 = ability2;
     }
