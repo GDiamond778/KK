@@ -626,8 +626,8 @@ function updateAbility(ability) {
 
 function updateLevel() {
     if (levelCheck.checked) {
-        level1.value = 10;
-        level2.value = 10;
+        level1.value = 12;
+        level2.value = 12;
         update();
     } else {
         level1.value = 50;
@@ -692,7 +692,7 @@ function loadSets(onlyFirst = false, onlySecond = false) {
       
 
         level1.value = set1.level;
-        if (levelCheck.checked) level1.value = 100;
+        if (levelCheck.checked) level1.value = 12;
 
         $("#moveOne1").val(set1.moves.move1);
         $("#moveOne1").select2().trigger('change');
@@ -748,7 +748,7 @@ function loadSets(onlyFirst = false, onlySecond = false) {
      
 
         level2.value = set2.level;
-        if (levelCheck.checked) level2.value = 100;
+        if (levelCheck.checked) level2.value = 12;
 
         $("#moveOne2").val(set2.moves.move1);
         $("#moveOne2").select2().trigger('change');
@@ -1215,7 +1215,7 @@ function calculateStat(base, EV, level, isHP = false, posNat, negNat, veryNat, n
 
     level = parseInt(level);
     if (isHP) {
-        return Math.ceil(1*(((1 * base) + (20 * EV) + 10) * level / 40 + 5) * 1.5);
+        return Math.ceil(1*(((1 * base) + (8 * EV) + 10) * level / 40 + 5) * 1.5);
         //return Math.ceil(1*(((2 * base) + (20 * EV) + 10) * level / 10 + 5) * 1.45);
        //LL return Math.floor((2 * base + Math.floor(EV / 4)) * level / 100) + level + 10;
     }
@@ -2439,6 +2439,11 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
         multi *= 1.2;
         stuffUsed.ability1 = ability1;
     }
+    else if (ability1 == "Balanced" && tempType == "Balance") {
+        tempType = "Balance";
+        multi *= 1.5;
+        stuffUsed.ability1 = ability1;
+    }
     else if (ability1 == "Insectify" && tempType == "Balance") {
         tempType = "Insect";
         multi *= 1.1;
@@ -2758,7 +2763,7 @@ function getMultiplier(loom1, loom2, move, movePower, crit, level, ul = false, s
 
     //dmg = Math.floor(Math.floor(dmg * tempAtk.atk * tempPower/ tempDef.def ) / 50) + 2;
     console.log(tempAtk.atk);
-    dmg = dmg * tempAtk.atk * tempPower / tempDef.def  / (level/50*1.5 + 30) + 2;
+    dmg = .85*(dmg * tempAtk.atk * tempPower / tempDef.def  / (level/50*1.5 + 30) + 2);
     if (isDouble && move.aoe == true) {
         multi *= 0.75;
     }

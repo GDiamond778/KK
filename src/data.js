@@ -202,7 +202,7 @@ var loomians = {
     sparstik: {
        name: "Sparstik",
        number: 26,
-       types: ["Bug", "Wood"],
+       types: ["Insect", "Wood"],
        abilities: [""],
        sAbility: [""],
        finalEvo: false,
@@ -222,7 +222,7 @@ var loomians = {
     luminii: {
        name: "Luminii",
        number: 28,
-       types: ["Light", "Bug"],
+       types: ["Light", "Insect"],
        abilities: [""],
        sAbility: [""],
        finalEvo: false,
@@ -242,7 +242,7 @@ var loomians = {
     cucommet: {
        name: "Cucommet",
        number: 29,
-       types: ["Light", "Bug"],
+       types: ["Light", "Insect"],
        abilities: [""],
        sAbility: [""],
        finalEvo: false,
@@ -282,7 +282,7 @@ var loomians = {
     nymon: {
        name: "Nymon",
        number: 33,
-       types: ["Bug"],
+       types: ["Insect"],
        abilities: [""],
        sAbility: [""],
        finalEvo: false,
@@ -302,7 +302,7 @@ var loomians = {
     spagonfly: {
        name: "Spagonfly",
        number: 34,
-       types: ["Bug"],
+       types: ["Insect"],
        abilities: [""],
        sAbility: [""],
        finalEvo: false,
@@ -362,7 +362,7 @@ var loomians = {
     mutle: {
        name: "Mutle",
        number: 40,
-       types: ["Bug", "Earth"],
+       types: ["Insect", "Earth"],
        abilities: [""],
        sAbility: [""],
        finalEvo: false,
@@ -382,7 +382,7 @@ var loomians = {
     manfu: {
        name: "Manfu",
        number: 42,
-       types: ["Bug"],
+       types: ["Insect"],
        abilities: [""],
        sAbility: [""],
        finalEvo: false,
@@ -522,7 +522,7 @@ var loomians = {
     blitzaura: {
        name: "Blitzaura",
        number: 51,
-       types: ["Lighting"],
+       types: ["Lightning"],
        abilities: [""],
        sAbility: [""],
        finalEvo: true,
@@ -702,7 +702,7 @@ var loomians = {
     kashiju: {
        name: "Kashiju",
        number: 123,
-       types: ["Lighting"],
+       types: ["Lightning"],
        abilities: [""],
        sAbility: [""],
        finalEvo: true,
@@ -762,7 +762,7 @@ var loomians = {
     mirama: {
        name: "Mirama",
        number: 127,
-       types: ["Lighting", "Light"],
+       types: ["Lightning", "Light"],
        abilities: [""],
        sAbility: [""],
        finalEvo: true,
@@ -2225,7 +2225,7 @@ var types = {
     },
 };
 
-var abilities = ["Accelerate", "Armor Swap", "Armored Spine", "Avian", "Botanist", "Clamp", "Dampen", "Determination", "Dizzy", "Exoskeleton", "Glow Sap", "Greedy", "Hoarder", "Insectify", "Light Show", "Puff Up", "Reflector", "Rise", "Sapper", "Scout", "Snaked", "Static", "Stormbreaker", "Surprise"];
+var abilities = ["Accelerate", "Alleviate", "Armor Down", "Armor Swap", "Armored Spine","Ashes to Embers", "Balanced", "Botanist", "Clamp", "Dampen", "Determination", "Dizzy", "Exoskeleton", "Glow Sap", "Greedy", "Hoarder", "Insectify", "Light Show", "Puff Up", "Reflector", "Rise", "Sapper", "Scout", "Snaked", "Static", "Stormbreaker", "Surprise"];
 
 var typeModAbilities = {
     avian: {
@@ -2364,6 +2364,12 @@ var typeModAbilities = {
     insulated: {
         name: "Insulated",
         typeModifier: { type: "Fire", type2: "Ice", modifier: 0.5},
+        powerMod: false
+    },
+
+    balanced: {
+        name: "Balanced",
+        typeModifier: { type: "Balance", modifier: 0.5},
         powerMod: false
     },
 
